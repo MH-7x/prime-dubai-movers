@@ -5,6 +5,7 @@ export interface LocationData {
   name: string;
   emirate: string;
   img?: StaticImageData;
+  moreImgs?: string[];
   primaryKeyword: string;
   metaTitle: string;
   metaDescription: string;
@@ -3799,12 +3800,64 @@ import mussafahImg from "../../../public/loc/Movers-and-Packers-in-Mussafah.jpg"
 import almajazImg from "../../../public/loc/Movers-and-Packers-in-Al-Majaz-Sharjah.jpg";
 import alnahdaImg from "../../../public/loc/Movers-and-Packers-in-Al-Nahda-Sharjah.jpg";
 
+const otherImgs = {
+  content1: [
+    "/loc/prime-dubai-movers-abu-dhabi-corniche-relocation-service.jpg",
+    "/loc/prime-dubai-movers-saadiyat-island-villa-moving-abu-dhabi.jpg",
+  ],
+  content2: [
+    "/loc/prime-dubai-movers-sharjah-al-majaz-waterfront-moving-truck.jpg",
+    "/loc/prime-dubai-movers-sharjah-apartment-moving-crew.jpg",
+  ],
+  content3: [
+    "/loc/prime-dubai-movers-ajman-corniche-moving-services.jpg",
+    "/loc/prime-dubai-movers-ajman-villa-packing-team.jpg",
+  ],
+  content4: [
+    "/loc/prime-dubai-movers-ras-al-khaimah-al-marjan-island-relocation.jpg",
+    "/loc/prime-dubai-movers-rak-villa-moving-hajar-mountain-backdrop.jpg",
+  ],
+  content5: [
+    "/loc/prime-dubai-movers-fujairah-mountain-route-moving-truck.jpg",
+    "/loc/prime-dubai-movers-fujairah-coastal-apartment-move.jpg",
+  ],
+  content6: [
+    "/loc/prime-dubai-movers-umm-al-quwain-coastal-relocation-service.jpg",
+    "/loc/prime-dubai-movers-uaq-villa-packing-team-uniform.jpg",
+  ],
+  content7: [
+    "/loc/prime-dubai-movers-al-ain-garden-city-moving-oasis.jpg",
+    "/loc/prime-dubai-movers-al-ain-villa-move-jebel-hafeet-backdrop.jpg",
+  ],
+  content8: [
+    "/loc/prime-dubai-movers-khalifa-city-abu-dhabi-villa-compound-moving.jpg",
+    "/loc/prime-dubai-movers-khalifa-city-villa-interior-packing.jpg",
+  ],
+  content9: [
+    "/loc/prime-dubai-movers-al-reem-island-high-rise-moving-service-abu-dhabi.jpg",
+    "/loc/prime-dubai-movers-al-reem-island-tower-elevator-move.jpg",
+  ],
+  content10: [
+    "/loc/prime-dubai-movers-mussafah-industrial-office-relocation-abu-dhabi.jpg",
+    "/loc/prime-dubai-movers-mussafah-apartment-budget-moving-service.jpg",
+  ],
+  content11: [
+    "/loc/prime-dubai-movers-al-majaz-waterfront-sharjah-tower-moving.jpg",
+    "/loc/prime-dubai-movers-al-majaz-sharjah-apartment-move-crew.jpg",
+  ],
+  content12: [
+    "/loc/prime-dubai-movers-al-nahda-sharjah-dubai-border-moving-truck.jpg",
+    "/loc/prime-dubai-movers-al-nahda-sharjah-apartment-building-move.jpg",
+  ],
+};
+
 export const otherEmirateLocations: LocationData[] = [
   {
     slug: "abu-dhabi",
     name: "Abu Dhabi",
     emirate: "Abu Dhabi",
     img: abuDhabiImg,
+    moreImgs: otherImgs.content1,
     primaryKeyword: "movers and packers in Abu Dhabi",
     metaTitle: "Movers and Packers in Abu Dhabi | Prime Dubai Movers",
     metaDescription:
@@ -4010,6 +4063,7 @@ export const otherEmirateLocations: LocationData[] = [
     name: "Sharjah",
     emirate: "Sharjah",
     img: SharjahImg,
+    moreImgs: otherImgs.content2,
     primaryKeyword: "movers and packers in Sharjah",
     metaTitle: "Movers and Packers in Sharjah | Prime Dubai Movers",
     metaDescription:
@@ -4211,6 +4265,7 @@ export const otherEmirateLocations: LocationData[] = [
     name: "Ajman",
     emirate: "Ajman",
     img: ajmanImg,
+    moreImgs: otherImgs.content3,
     primaryKeyword: "movers and packers in Ajman",
     metaTitle: "Movers and Packers in Ajman | Prime Dubai Movers",
     metaDescription:
@@ -4388,6 +4443,7 @@ export const otherEmirateLocations: LocationData[] = [
     name: "Ras Al Khaimah",
     emirate: "Ras Al Khaimah",
     img: rakImg,
+    moreImgs: otherImgs.content4,
     primaryKeyword: "movers and packers Ras Al Khaimah",
     metaTitle: "Movers and Packers in Ras Al Khaimah | Prime Dubai Movers",
     metaDescription:
@@ -4564,6 +4620,7 @@ export const otherEmirateLocations: LocationData[] = [
     name: "Fujairah",
     emirate: "Fujairah",
     img: fujairahImg,
+    moreImgs: otherImgs.content5,
     primaryKeyword: "movers and packers in Fujairah",
     metaTitle: "Movers and Packers in Fujairah | Prime Dubai Movers",
     metaDescription:
@@ -4762,6 +4819,7 @@ export const otherEmirateLocations: LocationData[] = [
     name: "Umm Al Quwain",
     emirate: "Umm Al Quwain",
     img: ummalqImg,
+    moreImgs: otherImgs.content6,
     primaryKeyword: "movers and packers Umm Al Quwain",
     metaTitle: "Movers and Packers in Umm Al Quwain | Prime Dubai Movers",
     metaDescription:
@@ -4958,6 +5016,7 @@ export const otherEmirateLocations: LocationData[] = [
     name: "Al Ain",
     emirate: "Abu Dhabi",
     img: alainImg,
+    moreImgs: otherImgs.content7,
     primaryKeyword: "movers and packers in Al Ain",
     metaTitle: "Movers and Packers in Al Ain | Prime Dubai Movers",
     metaDescription:
@@ -5158,6 +5217,7 @@ export const otherEmirateLocations: LocationData[] = [
     name: "Khalifa City",
     emirate: "Abu Dhabi",
     img: kcityImg,
+    moreImgs: otherImgs.content8,
     primaryKeyword: "movers packers Khalifa City",
     metaTitle: "Movers and Packers in Khalifa City | Prime Dubai Movers",
     metaDescription:
@@ -5362,6 +5422,7 @@ export const otherEmirateLocations: LocationData[] = [
     name: "Al Reem Island",
     emirate: "Abu Dhabi",
     img: alreemImg,
+    moreImgs: otherImgs.content9,
     primaryKeyword: "movers packers Al Reem Island",
     metaTitle: "Movers and Packers in Al Reem Island | Prime Dubai Movers",
     metaDescription:
@@ -5566,6 +5627,7 @@ export const otherEmirateLocations: LocationData[] = [
     name: "Mussafah",
     emirate: "Abu Dhabi",
     img: mussafahImg,
+    moreImgs: otherImgs.content10,
     primaryKeyword: "movers and packers Mussafah",
     metaTitle: "Movers and Packers in Mussafah | Prime Dubai Movers",
     metaDescription:
@@ -5768,6 +5830,7 @@ export const otherEmirateLocations: LocationData[] = [
     name: "Al Majaz, Sharjah",
     emirate: "Sharjah",
     img: almajazImg,
+    moreImgs: otherImgs.content11,
     primaryKeyword: "movers packers Al Majaz Sharjah",
     metaTitle: "Movers and Packers in Al Majaz Sharjah | Prime Dubai Movers",
     metaDescription:
@@ -5940,6 +6003,7 @@ export const otherEmirateLocations: LocationData[] = [
     name: "Al Nahda, Sharjah",
     emirate: "Sharjah",
     img: alnahdaImg,
+    moreImgs: otherImgs.content12,
     primaryKeyword: "movers packers Al Nahda Sharjah",
     metaTitle: "Movers and Packers in Al Nahda Sharjah | Prime Dubai Movers",
     metaDescription:

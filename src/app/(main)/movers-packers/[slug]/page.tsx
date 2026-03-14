@@ -128,7 +128,16 @@ export default async function LocationPage({ params }: PageProps) {
               <p className="text-body leading-relaxed text-lg">
                 {location.areaIntro}
               </p>
-              <div className="my-12 bg-gold-light w-full aspect-video rounded-3xl"></div>
+              <div className="my-12 bg-gold-light w-full aspect-video rounded-3xl relative overflow-hidden">
+                {location.moreImgs && location.moreImgs.length > 0 && (
+                  <Image
+                    src={location.moreImgs[0]}
+                    alt={"Prime Dubai Movers Services in " + location.name}
+                    fill
+                    className="object-cover"
+                  />
+                )}
+              </div>
               {location.detailedDescription && (
                 <div className="mt-6 ">
                   <div className="text-body leading-relaxed md:text-lg space-y-2">
@@ -182,7 +191,16 @@ export default async function LocationPage({ params }: PageProps) {
               </div>
             ))}
           </div>
-          <div className="mt-16 bg-gold-light max-w-4xl mx-auto aspect-video rounded-3xl"></div>
+          <div className="mt-16 bg-gold-light max-w-4xl mx-auto aspect-video rounded-3xl relative overflow-hidden">
+            {location.moreImgs && location.moreImgs.length > 0 && (
+              <Image
+                src={location.moreImgs[1]}
+                alt={"Best Movers in " + location.name}
+                fill
+                className="object-cover"
+              />
+            )}
+          </div>
         </div>
       </section>
 
@@ -250,7 +268,7 @@ export default async function LocationPage({ params }: PageProps) {
                 {location.costFactors.map((factor, idx) => (
                   <span
                     key={idx}
-                    className="bg-white/30 border border-white/30 rounded-full px-5 py-2.5 text-sm font-medium text-body"
+                    className="bg-white/30 border border-white/30 md:rounded-full px-5 py-2.5 text-sm font-medium text-body"
                   >
                     {factor}
                   </span>
