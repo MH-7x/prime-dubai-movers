@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/accordion";
 import { allLocations, getLocationBySlug } from "@/lib/data/locations";
 import FreeQuotePage from "@/app/(main)/free-quote/page";
+import Image from "next/image";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -62,7 +63,18 @@ export default async function LocationPage({ params }: PageProps) {
       {/* Hero Section */}
       <section className="bg-navy text-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 grid-cols-1 gap-10 items-center">
-          <div className="bg-gold-light/50 w-full aspect-4/3 rounded-3xl md:order-1 order-2"></div>
+          <div className="bg-gold-light/50 w-full aspect-square rounded-3xl md:order-1 order-2 relative overflow-hidden">
+            {location.img && (
+              <Image
+                src={location.img}
+                alt={"Movers and Packers in " + location.name}
+                fill
+                loading="eager"
+                placeholder="blur"
+                className="object-cover"
+              />
+            )}
+          </div>
           <div className="md:order-2 order-1">
             <nav className="flex items-center gap-2 text-sm text-gray-300 mb-6">
               <Link href="/" className="hover:text-gold transition-colors">

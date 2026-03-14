@@ -1,9 +1,10 @@
 import { ReactNode } from "react";
-
+import { StaticImageData } from "next/image";
 export interface LocationData {
   slug: string;
   name: string;
   emirate: string;
+  img?: StaticImageData;
   primaryKeyword: string;
   metaTitle: string;
   metaDescription: string;
@@ -3785,11 +3786,25 @@ export const dubaiLocations: LocationData[] = [
   },
 ];
 
+import abuDhabiImg from "../../../public/loc/Movers-and-Packers-in-Abu-Dhabi.jpg";
+import SharjahImg from "../../../public/loc/Movers-and-Packers-in-Sharjah.jpg";
+import ajmanImg from "../../../public/loc/Movers-and-Packers-in-Ajman.jpg";
+import rakImg from "../../../public/loc/Movers-and-Packers-in-Ras-Al-Khaimah.jpg";
+import fujairahImg from "../../../public/loc/Movers-and-Packers-in-Fujairah.jpg";
+import ummalqImg from "../../../public/loc/Movers-and-Packers-in-Umm-Al-Quwain.jpg";
+import alainImg from "../../../public/loc/Movers-and-Packers-in-Al-Ain.jpg";
+import kcityImg from "../../../public/loc/Movers-and-Packers-in-Khalifa-City.jpg";
+import alreemImg from "../../../public/loc/Movers-and-Packers-in-Al-Reem-Island.jpg";
+import mussafahImg from "../../../public/loc/Movers-and-Packers-in-Mussafah.jpg";
+import almajazImg from "../../../public/loc/Movers-and-Packers-in-Al-Majaz-Sharjah.jpg";
+import alnahdaImg from "../../../public/loc/Movers-and-Packers-in-Al-Nahda-Sharjah.jpg";
+
 export const otherEmirateLocations: LocationData[] = [
   {
     slug: "abu-dhabi",
     name: "Abu Dhabi",
     emirate: "Abu Dhabi",
+    img: abuDhabiImg,
     primaryKeyword: "movers and packers in Abu Dhabi",
     metaTitle: "Movers and Packers in Abu Dhabi | Prime Dubai Movers",
     metaDescription:
@@ -3994,6 +4009,7 @@ export const otherEmirateLocations: LocationData[] = [
     slug: "sharjah",
     name: "Sharjah",
     emirate: "Sharjah",
+    img: SharjahImg,
     primaryKeyword: "movers and packers in Sharjah",
     metaTitle: "Movers and Packers in Sharjah | Prime Dubai Movers",
     metaDescription:
@@ -4194,6 +4210,7 @@ export const otherEmirateLocations: LocationData[] = [
     slug: "ajman",
     name: "Ajman",
     emirate: "Ajman",
+    img: ajmanImg,
     primaryKeyword: "movers and packers in Ajman",
     metaTitle: "Movers and Packers in Ajman | Prime Dubai Movers",
     metaDescription:
@@ -4370,6 +4387,7 @@ export const otherEmirateLocations: LocationData[] = [
     slug: "ras-al-khaimah",
     name: "Ras Al Khaimah",
     emirate: "Ras Al Khaimah",
+    img: rakImg,
     primaryKeyword: "movers and packers Ras Al Khaimah",
     metaTitle: "Movers and Packers in Ras Al Khaimah | Prime Dubai Movers",
     metaDescription:
@@ -4545,6 +4563,7 @@ export const otherEmirateLocations: LocationData[] = [
     slug: "fujairah",
     name: "Fujairah",
     emirate: "Fujairah",
+    img: fujairahImg,
     primaryKeyword: "movers and packers in Fujairah",
     metaTitle: "Movers and Packers in Fujairah | Prime Dubai Movers",
     metaDescription:
@@ -4742,6 +4761,7 @@ export const otherEmirateLocations: LocationData[] = [
     slug: "umm-al-quwain",
     name: "Umm Al Quwain",
     emirate: "Umm Al Quwain",
+    img: ummalqImg,
     primaryKeyword: "movers and packers Umm Al Quwain",
     metaTitle: "Movers and Packers in Umm Al Quwain | Prime Dubai Movers",
     metaDescription:
@@ -4937,6 +4957,7 @@ export const otherEmirateLocations: LocationData[] = [
     slug: "al-ain",
     name: "Al Ain",
     emirate: "Abu Dhabi",
+    img: alainImg,
     primaryKeyword: "movers and packers in Al Ain",
     metaTitle: "Movers and Packers in Al Ain | Prime Dubai Movers",
     metaDescription:
@@ -5136,6 +5157,7 @@ export const otherEmirateLocations: LocationData[] = [
     slug: "khalifa-city",
     name: "Khalifa City",
     emirate: "Abu Dhabi",
+    img: kcityImg,
     primaryKeyword: "movers packers Khalifa City",
     metaTitle: "Movers and Packers in Khalifa City | Prime Dubai Movers",
     metaDescription:
@@ -5339,6 +5361,7 @@ export const otherEmirateLocations: LocationData[] = [
     slug: "al-reem-island",
     name: "Al Reem Island",
     emirate: "Abu Dhabi",
+    img: alreemImg,
     primaryKeyword: "movers packers Al Reem Island",
     metaTitle: "Movers and Packers in Al Reem Island | Prime Dubai Movers",
     metaDescription:
@@ -5542,6 +5565,7 @@ export const otherEmirateLocations: LocationData[] = [
     slug: "mussafah",
     name: "Mussafah",
     emirate: "Abu Dhabi",
+    img: mussafahImg,
     primaryKeyword: "movers and packers Mussafah",
     metaTitle: "Movers and Packers in Mussafah | Prime Dubai Movers",
     metaDescription:
@@ -5743,6 +5767,7 @@ export const otherEmirateLocations: LocationData[] = [
     slug: "al-majaz",
     name: "Al Majaz, Sharjah",
     emirate: "Sharjah",
+    img: almajazImg,
     primaryKeyword: "movers packers Al Majaz Sharjah",
     metaTitle: "Movers and Packers in Al Majaz Sharjah | Prime Dubai Movers",
     metaDescription:
@@ -5914,6 +5939,7 @@ export const otherEmirateLocations: LocationData[] = [
     slug: "al-nahda-sharjah",
     name: "Al Nahda, Sharjah",
     emirate: "Sharjah",
+    img: alnahdaImg,
     primaryKeyword: "movers packers Al Nahda Sharjah",
     metaTitle: "Movers and Packers in Al Nahda Sharjah | Prime Dubai Movers",
     metaDescription:
