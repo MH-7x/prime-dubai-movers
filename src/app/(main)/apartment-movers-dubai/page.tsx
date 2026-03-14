@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { getServiceBySlug } from "@/lib/data/services";
 import ServicePageTemplate from "@/components/sections/ServicePageTemplate";
 import { notFound } from "next/navigation";
-import heroImage from "../../../public/ser/Apartment-Movers-in-Dubai.jpg";
+import heroImage from "../../../../public/ser/Apartment-Movers-in-Dubai.jpg";
 const service = getServiceBySlug("apartment-movers-dubai");
 
 export const metadata: Metadata = {

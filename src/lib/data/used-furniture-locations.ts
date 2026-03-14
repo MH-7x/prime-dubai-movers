@@ -53,13 +53,13 @@ export const usedFurnitureLocations: UFLocation[] = [
     slug: "used-furniture-buyers-dubai",
     city: "Dubai",
     cityShort: "Dubai",
-    metaTitle: "Sell Used Furniture in Dubai | Instant Cash & Free Pickup – Dubai Furniture Buyers",
+    metaTitle: "Sell Used Furniture in Dubai | Best Used Furniture Buyers",
     metaDescription: "Dubai's top-rated used furniture buyers. Sell your old furniture for instant cash with free same-day pickup. Homes, offices, villas, hotels. Get a free quote now!",
     h1: "Dubai's Most Trusted Used Furniture Buyers – Instant Cash, Free Pickup, Same-Day Service",
     heroSubtitle: "Sell Your Furniture for Cash — Anywhere in Dubai",
     heroTagline: "Same-day pickup · Fair cash offers · Free valuation · All areas covered",
     introParagraphs: [
-      "Looking to sell used furniture in Dubai? Dubai Furniture Buyers is the city's leading second-hand furniture purchasing service. We buy everything from single items to complete villa clearances – and we pay fair market prices in cash, on the spot. No middlemen, no waiting, no hidden fees.",
+      "Looking to sell used furniture in Dubai? Best Used Furniture Buyers is the city's leading second-hand furniture purchasing service. We buy everything from single items to complete villa clearances – and we pay fair market prices in cash, on the spot. No middlemen, no waiting, no hidden fees.",
       "Just send us photos on WhatsApp, get a quote within minutes, and schedule your free same-day pickup. Our team of experienced valuators assesses every item based on brand, condition, age, and current resale demand.",
       "From Downtown Dubai and Business Bay to Dubai Marina, JBR, Jumeirah, Al Barsha, Deira, Bur Dubai, Dubai Silicon Oasis, JLT, DIFC, Motor City, Sports City, Arabian Ranches, Palm Jumeirah, and beyond – we serve every corner of the city."
     ],
@@ -106,7 +106,7 @@ export const usedFurnitureLocations: UFLocation[] = [
       { question: "Can I sell just one item, or do you only buy in bulk?", answer: "We buy everything from a single chair to a full villa's worth of furniture. No minimum or maximum." }
     ],
     ctaHeading: "Ready to Sell? Get Your Free Quote Now",
-    ctaBody: "Don't let your old furniture collect dust. Turn it into cash today with Dubai Furniture Buyers – the fastest, fairest, and most trusted used furniture buying service in the city.",
+    ctaBody: "Don't let your old furniture collect dust. Turn it into cash today with Best Used Furniture Buyers – the fastest, fairest, and most trusted used furniture buying service in the city.",
     canonicalPath: "/used-furniture-buyers-dubai",
     schemaCity: "Dubai"
   },
@@ -120,7 +120,7 @@ export const usedFurnitureLocations: UFLocation[] = [
     heroSubtitle: "Sell Your Furniture for Cash or Buy Quality Pre-Owned Pieces — Anywhere in Abu Dhabi",
     heroTagline: "Same-day pickup · Fair cash offers · Free valuation · All areas covered",
     introParagraphs: [
-      "Dubai Furniture Buyers is Abu Dhabi's reliable partner for buying and selling pre-owned furniture and home appliances. Whether you're an expat relocating from Abu Dhabi, a family upgrading their villa in Khalifa City, or a landlord furnishing rental apartments on Al Reem Island, we handle the entire process so you don't have to.",
+      "Best Used Furniture Buyers is Abu Dhabi's reliable partner for buying and selling pre-owned furniture and home appliances. Whether you're an expat relocating from Abu Dhabi, a family upgrading their villa in Khalifa City, or a landlord furnishing rental apartments on Al Reem Island, we handle the entire process so you don't have to.",
       "Here's how simple it is: contact us with photos of your furniture, receive a fair cash offer within the hour, and we pick up from your location — often the same day. No dismantling headaches, no haggling, no wasted weekends. We pay on the spot in cash.",
       "We also sell quality second-hand furniture at our showroom. Every item has been inspected, cleaned, and priced honestly. Our teams operate across every district in the emirate, from the city centre and Corniche area to Mussafah, Mohammed Bin Zayed City, and the islands."
     ],
@@ -167,7 +167,7 @@ export const usedFurnitureLocations: UFLocation[] = [
       { question: "Is there anything you don't buy?", answer: "We generally pass on items with major structural damage, heavy staining, pest issues, or mattresses in poor hygienic condition. We also do not buy built-in or wall-mounted fixtures that can't be removed without property damage. When in doubt, send photos and we'll give you a straight answer." }
     ],
     ctaHeading: "Sell or Buy Used Furniture in Abu Dhabi Today",
-    ctaBody: "Whether you have one piece to sell or an entire property to clear, Dubai Furniture Buyers makes it simple. Contact us now for a free, no-obligation valuation. We respond fast, we pay fair, and we pick up on your schedule.",
+    ctaBody: "Whether you have one piece to sell or an entire property to clear, Best Used Furniture Buyers makes it simple. Contact us now for a free, no-obligation valuation. We respond fast, we pay fair, and we pick up on your schedule.",
     canonicalPath: "/used-furniture-buyers-abu-dhabi",
     schemaCity: "Abu Dhabi"
   },

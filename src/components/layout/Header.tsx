@@ -83,6 +83,15 @@ const navLinks = [
   { name: "Contact", href: "/contact" },
 ];
 
+const locations = [
+  { href: "/used-furniture-buyers-dubai", label: "Dubai" },
+  { href: "/used-furniture-buyers-abu-dhabi", label: "Abu Dhabi" },
+  { href: "/used-furniture-buyers-sharjah", label: "Sharjah" },
+  { href: "/used-furniture-buyers-ajman", label: "Ajman" },
+  { href: "/used-furniture-buyers-al-ain", label: "Al Ain" },
+  { href: "/used-furniture-buyers-ras-al-khaimah", label: "Ras Al Khaimah" },
+];
+
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -280,7 +289,34 @@ export default function Header() {
                 </div>
               )}
             </div>
-
+            {/* Used Furniture Menu */}
+            <div
+              className="relative"
+              onMouseEnter={() => setActiveDropdown("furniture")}
+              onMouseLeave={() => setActiveDropdown(null)}
+            >
+              <button className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-navy hover:text-gold transition-colors">
+                Used Furniture
+                <ChevronDown
+                  className={`size-3.5 transition-transform duration-200 ${
+                    activeDropdown === "furniture" ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              {activeDropdown === "furniture" && (
+                <div className="absolute top-full z-10 left-0 w-56 bg-white rounded-lg shadow-xl border border-gray-100 py-2 animate-in fade-in slide-in-from-top-1 duration-150">
+                  {locations.map((service) => (
+                    <a
+                      key={service.href}
+                      href={service.href}
+                      className="block px-4 py-2 text-sm text-body hover:bg-off-white hover:text-gold transition-colors"
+                    >
+                      {service.label}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
             <Link
               href="/about"
               className="px-3 py-2 text-sm font-medium text-navy hover:text-gold transition-colors"
@@ -426,6 +462,34 @@ export default function Header() {
                       )}
                     </div>
 
+                    {/* Used Furniture */}
+                    <div className="border-b border-gray-100">
+                      <button
+                        onClick={() => toggleMobileSection("furniture")}
+                        className="flex items-center justify-between w-full py-3 text-sm font-medium text-navy hover:text-gold transition-colors"
+                      >
+                        Used Furniture
+                        <ChevronDown
+                          className={`size-4 transition-transform duration-200 ${
+                            mobileExpanded === "furniture" ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+                      {mobileExpanded === "furniture" && (
+                        <div className="pb-3 pl-4 flex flex-col gap-1">
+                          {locations.map((service) => (
+                            <a
+                              key={service.href}
+                              href={service.href}
+                              onClick={() => setMobileOpen(false)}
+                              className="py-1.5 text-sm text-body hover:text-gold transition-colors"
+                            >
+                              {service.label}
+                            </a>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                     <Link
                       href="/about"
                       onClick={() => setMobileOpen(false)}

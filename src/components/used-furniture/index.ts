@@ -1,0 +1,9 @@
+export { default as UFHero } from "./UFHero";
+export { default as UFIntroSection } from "./UFIntroSection";
+export { default as UFHowItWorks } from "./UFHowItWorks";
+export { default as UFWhatWeBuy } from "./UFWhatWeBuy";
+export { default as UFPricingTable } from "./UFPricingTable";
+export { default as UFWhyChooseUs } from "./UFWhyChooseUs";
+export { default as UFAreasServed } from "./UFAreasServed";
+export { default as UFFAQ } from "./UFFAQ";
+export { default as UFCTASection } from "./UFCTASection";
