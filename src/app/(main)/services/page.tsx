@@ -20,6 +20,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 
+import Image from "next/image";
 export const metadata: Metadata = {
   title: "Professional Moving Services in Dubai | Prime Dubai Movers",
   description:
@@ -34,6 +35,7 @@ const services = [
     description:
       "Complete house relocation services across Dubai. We handle everything from packing fragile items to safely transporting your entire household to your new home.",
     alt: "Professional house moving service in Dubai",
+    src: "/House-Moving-in-Dubai.jpg",
   },
   {
     name: "Villa Moving Services",
@@ -42,6 +44,7 @@ const services = [
     description:
       "Specialized villa moving for Dubai's luxury residences. Our experienced team manages large-scale relocations including garden equipment, outdoor furniture, and high-value possessions.",
     alt: "Villa relocation service in Dubai",
+    src: "/Villa-Moving-in-Dubai.jpg",
   },
   {
     name: "Apartment Moving Services",
@@ -50,6 +53,7 @@ const services = [
     description:
       "Expert apartment movers skilled in high-rise logistics. We coordinate building management approvals, service elevators, and efficient floor-by-floor relocation.",
     alt: "Apartment moving service in Dubai high-rise buildings",
+    src: "/Apartment-Moving-in-Dubai.jpg",
   },
   {
     name: "Office Moving Services",
@@ -58,6 +62,7 @@ const services = [
     description:
       "Minimize downtime with our corporate relocation expertise. We move IT equipment, office furniture, and sensitive documents with zero disruption to your business operations.",
     alt: "Commercial office relocation service in Dubai",
+    src: "/Office-Moving-in-Dubai.jpg",
   },
   {
     name: "Furniture Moving Services",
@@ -66,6 +71,7 @@ const services = [
     description:
       "Professional furniture disassembly, wrapping, transport, and reassembly. We protect every piece with premium materials and handle bulky items with precision care.",
     alt: "Furniture moving and transport service in Dubai",
+    src: "/Furniture-Moving-in-Dubai.jpg",
   },
   {
     name: "Piano Moving Services",
@@ -74,6 +80,7 @@ const services = [
     description:
       "Delicate piano relocation by trained specialists using climate-controlled vehicles and custom padding. Grand pianos, uprights, and digital pianos moved safely.",
     alt: "Specialized piano moving service in Dubai",
+    src: "/Piano-Moving-in-Dubai.jpg",
   },
   {
     name: "Safe Moving Services",
@@ -82,6 +89,7 @@ const services = [
     description:
       "Heavy-duty safe and vault relocation using hydraulic equipment and reinforced vehicles. We move safes of all sizes while protecting your floors and walls.",
     alt: "Heavy safe and vault moving service in Dubai",
+    src: "/ser/safe-movers-in-dubai.jpg",
   },
   {
     name: "Cheap Movers Services",
@@ -90,6 +98,7 @@ const services = [
     description:
       "Affordable moving packages without compromising quality. Budget-friendly relocation options for students, small apartments, and cost-conscious families across Dubai.",
     alt: "Affordable and budget-friendly moving service in Dubai",
+    src: "/Cheap-Movers-in-Dubai.jpg",
   },
   {
     name: "Packing Services",
@@ -98,6 +107,7 @@ const services = [
     description:
       "Full-service packing and unpacking with premium materials. Custom crating for artwork, electronics wrapping, wardrobe boxes, and eco-friendly packing solutions.",
     alt: "Professional packing and unpacking service in Dubai",
+    src: "/Packing-Services-in-Dubai.jpg",
   },
 ];
 
@@ -167,8 +177,13 @@ export default function ServicesPage() {
                   className="group hover:shadow-lg transition-shadow duration-300 border border-gray-100"
                 >
                   <CardHeader className="pb-0">
-                    <div className="bg-gray-100 w-full aspect-[4/3] rounded-lg flex items-center justify-center text-gray-500 text-sm mb-4">
-                      <span>Placeholder: {service.alt}</span>
+                    <div className="bg-gray-100 w-full aspect-video rounded-lg  mb-4 relative overflow-hidden">
+                      <Image
+                        src={service.src}
+                        alt={service.alt}
+                        fill
+                        className="object-cover"
+                      />
                     </div>
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center">

@@ -19,7 +19,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { allLocations, getLocationBySlug } from "@/lib/data/locations";
-import FreeQuotePage from "@/app/free-quote/page";
+import FreeQuotePage from "@/app/(main)/free-quote/page";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
