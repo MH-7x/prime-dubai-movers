@@ -4,7 +4,7 @@ import Image from "next/image";
 import imgSrc from "../../../public/prime-dubai-movers.jpg";
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen md:min-h-150 flex items-center bg-navy/86">
+    <section className="relative h-max md:min-h-150 flex items-center bg-navy/86">
       <Image
         src={imgSrc}
         alt="Prime Dubai Movers and Packers"
@@ -13,7 +13,7 @@ export default function HeroSection() {
         placeholder="blur"
         className="object-cover -z-10"
       />
-      <div className="relative container-custom w-full py-20 md:py-28">
+      <div className="relative container-custom w-full pb-20 pt-16 md:py-28">
         <div className="max-w-3xl">
           {/* Trust badge */}
           <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-white/10 px-4 py-2 text-sm text-gold mb-8 backdrop-blur-sm">
@@ -24,7 +24,7 @@ export default function HeroSection() {
             <span className="font-medium">All 7 Emirates</span>
           </div>
 
-          <h1 className="text-white font-extrabold mb-6 md:text-5xl">
+          <h1 className="text-white font-extrabold text-[33px] mb-6 md:text-5xl">
             <span className="text-primary md:block">Prime Dubai Movers</span>{" "}
             Best Movers and Packers <br className="md:block hidden" /> in Dubai
           </h1>

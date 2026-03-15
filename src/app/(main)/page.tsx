@@ -92,7 +92,7 @@ export default function HomePage() {
         </div>
       </section>
       <ReviewSection />
-      <section className="max-w-4xl mx-auto my-20">
+      <section className="max-w-4xl mx-auto my-20 md:px-0 px-3">
         <h2 className="md:text-4xl text-3xl mb-5 text-navy">
           Choose Prime Movers in Dubai
         </h2>
@@ -110,7 +110,7 @@ export default function HomePage() {
           professional movers Dubai who are certified like Prime Dubai Movers.
         </p>
       </section>
-      <section className="max-w-4xl mx-auto my-20">
+      <section className="max-w-4xl mx-auto my-20 md:px-0 px-3">
         <h2 className="md:text-4xl text-3xl mb-5 text-navy">
           Plan Your Moving ? Contact Prime Dubai Movers
         </h2>

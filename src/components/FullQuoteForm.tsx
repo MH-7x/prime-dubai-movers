@@ -284,7 +284,7 @@ const FullQuoteForm = () => {
                             updateField("propertyType", v ? v : "")
                           }
                         >
-                          <SelectTrigger className="mt-1">
+                          <SelectTrigger className="mt-2">
                             <SelectValue placeholder="Select property type" />
                           </SelectTrigger>
                           <SelectContent>
@@ -309,7 +309,7 @@ const FullQuoteForm = () => {
                             updateField("bedrooms", v ? v : "")
                           }
                         >
-                          <SelectTrigger className="mt-1">
+                          <SelectTrigger className="mt-2">
                             <SelectValue placeholder="Select bedrooms" />
                           </SelectTrigger>
                           <SelectContent>
@@ -366,7 +366,7 @@ const FullQuoteForm = () => {
                             updateField("flexibility", v ? v : "")
                           }
                         >
-                          <SelectTrigger className="mt-1">
+                          <SelectTrigger className="mt-2">
                             <SelectValue placeholder="How flexible are you?" />
                           </SelectTrigger>
                           <SelectContent>
@@ -456,7 +456,7 @@ const FullQuoteForm = () => {
                           placeholder="Any special items, requirements, or questions?"
                           value={String(formData.notes)}
                           onChange={(e) => updateField("notes", e.target.value)}
-                          className="mt-1"
+                          className="mt-2"
                           rows={4}
                         />
                       </div>
