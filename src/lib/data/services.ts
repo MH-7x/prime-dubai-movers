@@ -21,7 +21,7 @@ export const services: ServiceData[] = [
     slug: "house-movers-dubai",
     name: "House Moving",
     primaryKeyword: "house movers in Dubai",
-    metaTitle: "House Movers in Dubai | Trusted Home Relocation | Prime Dubai Movers",
+    metaTitle: "House Movers in Dubai | Trusted Home Relocation",
     metaDescription:
       "Looking for reliable house movers in Dubai? Prime Dubai Movers offers stress-free home relocation with professional packing, safe transport & setup. Get a free quote today!",
     heroHeadline: "Trusted House Movers in Dubai for a Seamless Home Relocation",
@@ -173,7 +173,7 @@ export const services: ServiceData[] = [
     slug: "villa-movers-dubai",
     name: "Villa Moving",
     primaryKeyword: "villa movers Dubai",
-    metaTitle: "Villa Movers Dubai | Premium Villa Relocation | Prime Dubai Movers",
+    metaTitle: "Villa Movers Dubai | Premium Villa Relocation",
     metaDescription:
       "Expert villa movers Dubai offering end-to-end relocation for luxury villas. Careful handling of high-value items, garden equipment & more. Book your free survey!",
     heroHeadline: "Premium Villa Movers Dubai for Effortless Luxury Relocations",
@@ -470,7 +470,7 @@ export const services: ServiceData[] = [
     slug: "office-movers-dubai",
     name: "Office Moving",
     primaryKeyword: "office movers Dubai",
-    metaTitle: "Office Movers Dubai | Minimal Downtime Relocation | Prime Dubai Movers",
+    metaTitle: "Office Movers Dubai | Minimal Downtime Relocation",
     metaDescription:
       "Trusted office movers Dubai for businesses of all sizes. We relocate workstations, IT equipment, filing systems & more with minimal disruption. Free site survey!",
     heroHeadline: "Office Movers Dubai That Keep Your Business Running",
@@ -616,7 +616,7 @@ export const services: ServiceData[] = [
     slug: "furniture-movers-dubai",
     name: "Furniture Moving",
     primaryKeyword: "furniture movers Dubai",
-    metaTitle: "Furniture Movers Dubai | Safe Furniture Transport | Prime Dubai Movers",
+    metaTitle: "Furniture Movers Dubai | Safe Furniture Transport",
     metaDescription:
       "Need furniture movers Dubai? We transport sofas, beds, wardrobes & more with expert wrapping and careful handling. Single items or full loads. Get a quote!",
     heroHeadline: "Expert Furniture Movers Dubai for Safe, Scratch-Free Transport",
@@ -762,7 +762,7 @@ export const services: ServiceData[] = [
     slug: "piano-movers-dubai",
     name: "Piano Moving",
     primaryKeyword: "piano moving Dubai",
-    metaTitle: "Piano Movers Dubai | Safe Piano Transport | Prime Dubai Movers",
+    metaTitle: "Piano Movers Dubai | Safe Piano Transport",
     metaDescription:
       "Specialist piano moving Dubai service for uprights, grands & baby grands. Climate-controlled transport, expert handling & full insurance. Book your piano move!",
     heroHeadline: "Specialist Piano Moving Dubai with Guaranteed Safe Handling",
@@ -903,7 +903,7 @@ export const services: ServiceData[] = [
     slug: "safe-movers-dubai",
     name: "Safe Moving",
     primaryKeyword: "safe movers in Dubai",
-    metaTitle: "Safe Movers in Dubai | Heavy Safe Transport | Prime Dubai Movers",
+    metaTitle: "Safe Movers in Dubai | Heavy Safe Transport",
     metaDescription:
       "Specialized safe movers in Dubai for home and commercial safes. We transport fireproof safes, gun safes & vault doors with proper equipment. Fully insured!",
     heroHeadline: "Professional Safe Movers in Dubai for Secure Heavy Transport",
@@ -1048,7 +1048,7 @@ export const services: ServiceData[] = [
     slug: "cheap-movers-dubai",
     name: "Cheap Movers",
     primaryKeyword: "cheap movers and packers Dubai",
-    metaTitle: "Cheap Movers and Packers Dubai | Affordable Quality | Prime Dubai Movers",
+    metaTitle: "Cheap Movers and Packers Dubai | Affordable Quality",
     metaDescription:
       "Affordable cheap movers and packers Dubai without cutting corners. Full-service packing, transport & setup at budget-friendly rates. Free quotes available!",
     heroHeadline: "Cheap Movers and Packers Dubai That Never Compromise on Quality",
@@ -1194,7 +1194,7 @@ export const services: ServiceData[] = [
     slug: "packing-services-dubai",
     name: "Packing Services",
     primaryKeyword: "packing services Dubai",
-    metaTitle: "Packing Services Dubai | Expert Packers | Prime Dubai Movers",
+    metaTitle: "Packing Services Dubai | Expert Packers",
     metaDescription:
       "Professional packing services Dubai by trained packers. Fragile items, artwork, wardrobes & kitchens packed with premium materials. Book standalone or with your move!",
     heroHeadline: "Professional Packing Services Dubai for a Damage-Free Move",
