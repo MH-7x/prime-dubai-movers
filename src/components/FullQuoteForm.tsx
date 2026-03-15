@@ -107,7 +107,7 @@ const FullQuoteForm = () => {
                 Return Home
               </Link>
               <a
-                href="tel:+971501234567"
+                href="tel:+971561046146"
                 className="inline-flex items-center justify-center border border-navy text-navy font-medium px-4 h-9 rounded-lg transition-colors text-sm"
               >
                 <Phone className="w-4 h-4 mr-2" /> Call Now Instead
@@ -431,10 +431,10 @@ const FullQuoteForm = () => {
             <p className="text-center text-body text-sm mt-6">
               Prefer to call?{" "}
               <a
-                href="tel:+971501234567"
+                href="tel:+971561046146"
                 className="text-gold font-medium hover:underline"
               >
-                +971 50 123 4567
+                +971 56 104 6146
               </a>
             </p>
           </div>
@@ -495,10 +495,10 @@ const FullQuoteForm = () => {
                   Call us directly for immediate assistance
                 </p>
                 <a
-                  href="tel:+971501234567"
+                  href="tel:+971561046146"
                   className="text-gold text-xl font-extrabold hover:underline"
                 >
-                  +971 50 123 4567
+                  +971 56 104 6146
                 </a>
               </CardContent>
             </Card>

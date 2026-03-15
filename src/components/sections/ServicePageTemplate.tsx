@@ -154,7 +154,7 @@ export default function ServicePageTemplate({
                     Get a Free Quote
                   </Button>
                 </Link>
-                <a href="tel:+971501234567" className="md:w-max w-full">
+                <a href="tel:+971561046146" className="md:w-max w-full">
                   <Button variant="secondary" size={"lg"} className="w-full">
                     <Phone className="w-4 h-4 mr-2" />
                     Call Now
@@ -450,16 +450,16 @@ export default function ServicePageTemplate({
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               <a
-                href="tel:+971501234567"
+                href="tel:+971561046146"
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/20 transition-colors group"
               >
                 <Phone className="w-8 h-8 text-gold mx-auto mb-3" />
                 <p className="text-white font-medium text-sm">Call Us</p>
-                <p className="text-gray-300 text-xs mt-1">+971 50 123 4567</p>
+                <p className="text-gray-300 text-xs mt-1">+971 56 104 6146</p>
               </a>
 
               <a
-                href="https://wa.me/971501234567"
+                href="https://wa.me/971561046146"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/20 transition-colors group"

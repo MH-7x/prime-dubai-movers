@@ -11,7 +11,7 @@ export default function UFPricingTable({
   rows,
   note,
   city,
-  whatsappNumber = "971501234567",
+  whatsappNumber = "971561046146",
 }: UFPricingTableProps) {
   return (
     <section className="py-20 bg-slate-50">
@@ -24,7 +24,8 @@ export default function UFPricingTable({
             What Is Your Furniture Worth in {city}?
           </h2>
           <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-            Estimated price ranges based on condition. Actual prices depend on brand, age, and market demand.
+            Estimated price ranges based on condition. Actual prices depend on
+            brand, age, and market demand.
           </p>
         </div>
 
@@ -33,9 +34,15 @@ export default function UFPricingTable({
             <table className="w-full">
               <thead>
                 <tr className="bg-[#1E3A5F]">
-                  <th className="text-left text-white font-semibold px-6 py-4 text-sm">Item / Category</th>
-                  <th className="text-center text-white font-semibold px-6 py-4 text-sm">Fair Condition</th>
-                  <th className="text-center text-white font-semibold px-6 py-4 text-sm">Good / Excellent</th>
+                  <th className="text-left text-white font-semibold px-6 py-4 text-sm">
+                    Item / Category
+                  </th>
+                  <th className="text-center text-white font-semibold px-6 py-4 text-sm">
+                    Fair Condition
+                  </th>
+                  <th className="text-center text-white font-semibold px-6 py-4 text-sm">
+                    Good / Excellent
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -44,9 +51,15 @@ export default function UFPricingTable({
                     key={i}
                     className={`border-b border-slate-100 hover:bg-amber-50/50 transition-colors ${i % 2 === 0 ? "bg-white" : "bg-slate-50/50"}`}
                   >
-                    <td className="px-6 py-4 text-sm font-medium text-[#1E3A5F]">{row.item}</td>
-                    <td className="px-6 py-4 text-center text-sm text-slate-600">{row.fairCondition}</td>
-                    <td className="px-6 py-4 text-center text-sm font-semibold text-amber-700">{row.goodCondition}</td>
+                    <td className="px-6 py-4 text-sm font-medium text-[#1E3A5F]">
+                      {row.item}
+                    </td>
+                    <td className="px-6 py-4 text-center text-sm text-slate-600">
+                      {row.fairCondition}
+                    </td>
+                    <td className="px-6 py-4 text-center text-sm font-semibold text-amber-700">
+                      {row.goodCondition}
+                    </td>
                   </tr>
                 ))}
               </tbody>

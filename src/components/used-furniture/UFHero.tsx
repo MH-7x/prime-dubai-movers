@@ -14,8 +14,8 @@ export default function UFHero({
   subtitle,
   tagline,
   city,
-  whatsappNumber = "971501234567",
-  phone = "+971 50 123 4567",
+  whatsappNumber = "971561046146",
+  phone = "+971 56 104 6146",
 }: UFHeroProps) {
   return (
     <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-[#1E3A5F]">

@@ -10,8 +10,8 @@ export default function UFCTASection({
   heading,
   body,
   city,
-  whatsappNumber = "971501234567",
-  phone = "+971 50 123 4567",
+  whatsappNumber = "971561046146",
+  phone = "+971 56 104 6146",
 }: UFCTASectionProps) {
   return (
     <section className="py-20 bg-gradient-to-br from-amber-500 to-amber-600 relative overflow-hidden">
@@ -23,11 +23,17 @@ export default function UFCTASection({
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="inline-flex items-center gap-2 bg-white/20 rounded-full px-4 py-1.5 mb-6">
           <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
-          <span className="text-white text-sm font-medium">Same-Day Service Available in {city}</span>
+          <span className="text-white text-sm font-medium">
+            Same-Day Service Available in {city}
+          </span>
         </div>
 
-        <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">{heading}</h2>
-        <p className="text-amber-100 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">{body}</p>
+        <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+          {heading}
+        </h2>
+        <p className="text-amber-100 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
+          {body}
+        </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -45,18 +51,41 @@ export default function UFCTASection({
             href={`tel:${phone.replace(/\s/g, "")}`}
             className="inline-flex items-center justify-center gap-2.5 bg-white/20 hover:bg-white/30 border-2 border-white/60 text-white font-bold px-8 py-4 rounded-xl transition-all duration-200 hover:shadow-xl text-base backdrop-blur-sm"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z" />
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"
+              />
             </svg>
             Call Us Now
           </a>
         </div>
 
         <div className="mt-10 flex flex-wrap justify-center gap-6 text-white/80 text-sm">
-          {["Available 7 Days a Week", "No Obligation Quote", "Cash Paid on Pickup", "Fully Licensed Business"].map((t, i) => (
+          {[
+            "Available 7 Days a Week",
+            "No Obligation Quote",
+            "Cash Paid on Pickup",
+            "Fully Licensed Business",
+          ].map((t, i) => (
             <span key={i} className="flex items-center gap-1.5">
-              <svg className="w-4 h-4 text-white/60" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              <svg
+                className="w-4 h-4 text-white/60"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                />
               </svg>
               {t}
             </span>

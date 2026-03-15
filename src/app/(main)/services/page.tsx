@@ -268,11 +268,11 @@ export default function ServicesPage() {
               </Button>
             </Link>
             <a
-              href="tel:+971501234567"
+              href="tel:+971561046146"
               className="flex items-center gap-2 text-white hover:text-gold transition-colors"
             >
               <Phone className="w-5 h-5" />
-              <span className="text-lg font-medium">+971 50 123 4567</span>
+              <span className="text-lg font-medium">+971 56 104 6146</span>
             </a>
           </div>
         </div>

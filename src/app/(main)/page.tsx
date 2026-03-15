@@ -100,7 +100,7 @@ export default function HomePage() {
             name: "Prime Dubai Movers",
             url: "https://primedubaimovers.com",
             logo: "https://primedubaimovers.com/logo.png",
-            telephone: "+971501234567",
+            telephone: "+971561046146",
             email: "info@primedubaimovers.com",
             address: {
               "@type": "PostalAddress",
@@ -125,7 +125,7 @@ export default function HomePage() {
             description:
               "Trusted movers and packers in Dubai with 14+ years experience. Residential, commercial & villa moving across all UAE emirates.",
             url: "https://primedubaimovers.com",
-            telephone: "+971501234567",
+            telephone: "+971561046146",
             email: "info@primedubaimovers.com",
             priceRange: "AED 499 - AED 30,000",
             areaServed: [

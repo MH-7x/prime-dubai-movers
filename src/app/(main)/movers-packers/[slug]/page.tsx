@@ -105,7 +105,7 @@ export default async function LocationPage({ params }: PageProps) {
                   Get Free Quote
                 </Link>
                 <a
-                  href="tel:+971501234567"
+                  href="tel:+971561046146"
                   className="inline-flex items-center justify-center border border-white text-white hover:bg-white/10 font-medium text-lg px-8 h-9 rounded-lg transition-colors"
                 >
                   <Phone className="w-5 h-5 mr-2" />
@@ -412,15 +412,15 @@ export default async function LocationPage({ params }: PageProps) {
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <a
-              href="tel:+971501234567"
+              href="tel:+971561046146"
               className="flex flex-col items-center gap-3 bg-white/10 backdrop-blur rounded-xl p-6 hover:bg-white/20 transition-colors border border-white/10"
             >
               <Phone className="w-8 h-8 text-gold" />
               <span className="font-medium">Call Us</span>
-              <span className="text-sm text-gray-300">+971 50 123 4567</span>
+              <span className="text-sm text-gray-300">+971 56 104 6146</span>
             </a>
             <a
-              href="https://wa.me/971501234567?text=Hi%2C%20I%20need%20a%20moving%20quote%20for%20a%20move%20in%20{location.name}"
+              href="https://wa.me/971561046146?text=Hi%2C%20I%20need%20a%20moving%20quote%20for%20a%20move%20in%20{location.name}"
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col items-center gap-3 bg-white/10 backdrop-blur rounded-xl p-6 hover:bg-white/20 transition-colors border border-white/10"
@@ -463,7 +463,7 @@ export default async function LocationPage({ params }: PageProps) {
             name: "Prime Dubai Movers",
             description: location.metaDescription,
             url: `https://primedubaimovers.com/movers-packers/${location.slug}`,
-            telephone: "+971501234567",
+            telephone: "+971561046146",
             email: "info@primedubaimovers.com",
             areaServed: {
               "@type": "Place",

@@ -117,11 +117,11 @@ export default function Header() {
         <div className="container-custom flex items-center justify-between py-2.5">
           <div className="hidden md:flex items-center gap-5">
             <a
-              href="tel:+971501234567"
+              href="tel:+971561046146"
               className="flex items-center gap-1.5 hover:text-gold transition-colors"
             >
               <Phone className="size-3" />
-              <span>+971 50 123 4567</span>
+              <span>+971 56 104 6146</span>
             </a>
             <a
               href="mailto:info@primedubaimovers.com"
@@ -138,11 +138,11 @@ export default function Header() {
           <div className="flex items-center justify-between gap-3  md:w-max w-full">
             <div>
               <a
-                href="tel:+971501234567"
+                href="tel:+971561046146"
                 className="md:hidden flex items-center gap-1.5 hover:text-gold transition-colors"
               >
                 <Phone className="size-3" />
-                <span>+971 50 123 4567</span>
+                <span>+971 56 104 6146</span>
               </a>
             </div>
             <div className="flex gap-x-3 md:ml-auto">
@@ -518,11 +518,11 @@ export default function Header() {
                     {/* Mobile Contact Info */}
                     <div className="mt-6 pt-4 border-t border-gray-100 flex flex-col gap-3 text-sm text-body">
                       <a
-                        href="tel:+971501234567"
+                        href="tel:+971561046146"
                         className="flex items-center gap-2 hover:text-gold transition-colors"
                       >
                         <Phone className="size-4 text-gold" />
-                        +971 50 123 4567
+                        +971 56 104 6146
                       </a>
                       <a
                         href="mailto:info@primedubaimovers.com"

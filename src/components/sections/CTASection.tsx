@@ -5,14 +5,14 @@ const contactChannels = [
   {
     icon: Phone,
     label: "Call Us",
-    value: "+971 50 123 4567",
-    href: "tel:+971501234567",
+    value: "+971 56 104 6146",
+    href: "tel:+971561046146",
   },
   {
     icon: MessageCircle,
     label: "WhatsApp",
     value: "Chat Now",
-    href: "https://wa.me/971501234567?text=Hi%2C%20I%20need%20a%20moving%20quote",
+    href: "https://wa.me/971561046146?text=Hi%2C%20I%20need%20a%20moving%20quote",
   },
   {
     icon: Mail,

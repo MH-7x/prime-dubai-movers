@@ -21,8 +21,8 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Call Us",
-    value: "+971 50 123 4567",
-    href: "tel:+971501234567",
+    value: "+971 56 104 6146",
+    href: "tel:+971561046146",
     description: "Speak directly with our moving consultants",
   },
   {
@@ -35,8 +35,8 @@ const contactInfo = [
   {
     icon: MessageCircle,
     title: "WhatsApp",
-    value: "+971 50 123 4567",
-    href: "https://wa.me/971501234567",
+    value: "+971 56 104 6146",
+    href: "https://wa.me/971561046146",
     description: "Quick responses via WhatsApp messaging",
   },
   {
@@ -57,7 +57,7 @@ const faqs = [
   {
     question: "What is the best way to get a quick quote?",
     answer:
-      "The fastest way to receive a quote is through our Free Quote page or by calling us directly at +971 50 123 4567. WhatsApp is also a great option for quick communication and sharing photos of items to be moved.",
+      "The fastest way to receive a quote is through our Free Quote page or by calling us directly at +971 56 104 6146. WhatsApp is also a great option for quick communication and sharing photos of items to be moved.",
   },
   {
     question: "Do you offer free on-site surveys?",
