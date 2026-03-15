@@ -124,11 +124,11 @@ export default function Header() {
               <span>+971 56 104 6146</span>
             </a>
             <a
-              href="mailto:info@primedubaimovers.com"
+              href="mailto:primedubaimovers.com@gmail.com"
               className="flex items-center gap-1.5 hover:text-gold transition-colors"
             >
               <Mail className="size-3" />
-              <span>info@primedubaimovers.com</span>
+              <span>primedubaimovers.com@gmail.com</span>
             </a>
             <span className="flex items-center gap-1.5">
               <Clock className="size-3" />
@@ -174,14 +174,18 @@ export default function Header() {
           isScrolled ? "sticky top-0 shadow-md z-50" : ""
         }`}
       >
-        <div className="container-custom flex items-center justify-between py-2">
+        <div className="container-custom flex items-center justify-between md:py-2 py-1.5">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-1 shrink-0 relative">
+
+          <Link
+            href="/"
+            className=" md:h-[60px] h-[50px] md:w-[150px] w-[140px] relative"
+          >
             <Image
               src={"/logo.svg"}
               alt="Prime Dubai Movers Logo"
-              width={130}
-              height={130}
+              fill
+              className="object-contain md:object-center object-left"
             />
           </Link>
 
@@ -355,7 +359,7 @@ export default function Header() {
                 </SheetTrigger>
                 <SheetContent
                   side="right"
-                  className="w-[300px] sm:w-[360px] overflow-y-auto"
+                  className=" w-[360px] overflow-y-auto"
                 >
                   <SheetHeader>
                     <SheetTitle>
@@ -506,7 +510,7 @@ export default function Header() {
                     </Link>
 
                     <Link
-                      href="/contact"
+                      href="/free-quote"
                       onClick={() => setMobileOpen(false)}
                       className="mt-4"
                     >
@@ -525,11 +529,11 @@ export default function Header() {
                         +971 56 104 6146
                       </a>
                       <a
-                        href="mailto:info@primedubaimovers.com"
+                        href="mailto:primedubaimovers.com@gmail.com"
                         className="flex items-center gap-2 hover:text-gold transition-colors"
                       >
                         <Mail className="size-4 text-gold" />
-                        info@primedubaimovers.com
+                        primedubaimovers.com@gmail.com
                       </a>
                       <span className="flex items-center gap-2">
                         <Clock className="size-4 text-gold" />

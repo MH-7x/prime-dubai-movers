@@ -238,7 +238,7 @@ export default function PrivacyPolicyPage() {
           </p>
           <ul className="list-none text-body space-y-2 mb-4">
             <li>
-              <strong>Email:</strong> info@primedubaimovers.com
+              <strong>Email:</strong> primedubaimovers.com@gmail.com
             </li>
             <li>
               <strong>Phone:</strong> +971 56 104 6146

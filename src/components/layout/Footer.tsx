@@ -124,11 +124,11 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:info@primedubaimovers.com"
+                  href="mailto:primedubaimovers.com@gmail.com"
                   className="flex items-start gap-3 text-sm text-gray-300 hover:text-gold transition-colors duration-200"
                 >
                   <Mail className="size-4 text-gold mt-0.5 shrink-0" />
-                  info@primedubaimovers.com
+                  primedubaimovers.com@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">

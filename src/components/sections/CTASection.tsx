@@ -17,8 +17,8 @@ const contactChannels = [
   {
     icon: Mail,
     label: "Email",
-    value: "info@primedubaimovers.com",
-    href: "mailto:info@primedubaimovers.com",
+    value: "primedubaimovers.com@gmail.com",
+    href: "mailto:primedubaimovers.com@gmail.com",
   },
   {
     icon: FileText,

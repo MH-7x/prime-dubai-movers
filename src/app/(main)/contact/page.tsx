@@ -28,8 +28,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    value: "info@primedubaimovers.com",
-    href: "mailto:info@primedubaimovers.com",
+    value: "primedubaimovers.com@gmail.com",
+    href: "mailto:primedubaimovers.com@gmail.com",
     description: "We respond to all emails within 2 hours",
   },
   {

@@ -4,7 +4,7 @@ import "../globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
-
+import { Toaster } from "@/components/ui/sonner";
 const inter = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
@@ -66,6 +66,7 @@ export default function RootLayout({
         <main className="overflow-hidden">{children}</main>
         <Footer />
         <WhatsAppButton />
+        <Toaster />
       </body>
     </html>
   );

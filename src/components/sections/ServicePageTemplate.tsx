@@ -470,13 +470,13 @@ export default function ServicePageTemplate({
               </a>
 
               <a
-                href="mailto:info@primedubaimovers.com"
+                href="mailto:primedubaimovers.com@gmail.com"
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/20 transition-colors group"
               >
                 <Mail className="w-8 h-8 text-gold mx-auto mb-3" />
                 <p className="text-white font-medium text-sm">Email</p>
                 <p className="text-gray-300 text-xs mt-1">
-                  info@primedubaimovers.com
+                  primedubaimovers.com@gmail.com
                 </p>
               </a>
 

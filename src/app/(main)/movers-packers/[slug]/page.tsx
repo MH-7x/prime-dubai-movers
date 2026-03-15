@@ -430,13 +430,13 @@ export default async function LocationPage({ params }: PageProps) {
               <span className="text-sm text-gray-300">Chat with us</span>
             </a>
             <a
-              href="mailto:info@primedubaimovers.com"
+              href="mailto:primedubaimovers.com@gmail.com"
               className="flex flex-col items-center gap-3 bg-white/10 backdrop-blur rounded-xl p-6 hover:bg-white/20 transition-colors border border-white/10"
             >
               <Mail className="w-8 h-8 text-gold" />
               <span className="font-medium">Email</span>
               <span className="text-sm text-gray-300">
-                info@primedubaimovers.com
+                primedubaimovers.com@gmail.com
               </span>
             </a>
             <Link
@@ -464,7 +464,7 @@ export default async function LocationPage({ params }: PageProps) {
             description: location.metaDescription,
             url: `https://primedubaimovers.com/movers-packers/${location.slug}`,
             telephone: "+971561046146",
-            email: "info@primedubaimovers.com",
+            email: "primedubaimovers.com@gmail.com",
             areaServed: {
               "@type": "Place",
               name: location.name,

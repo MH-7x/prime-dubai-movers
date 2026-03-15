@@ -24,6 +24,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Card, CardContent } from "./ui/card";
+import { toast } from "sonner";
+import { SendMail } from "@/lib/FormSubmission";
 const steps = [
   { number: 1, title: "Location" },
   { number: 2, title: "Property" },
@@ -31,20 +33,31 @@ const steps = [
   { number: 4, title: "Contact" },
 ];
 
+export const requiredFields = [
+  "moveFrom",
+  "moveTo",
+  "propertyType",
+  "bedrooms",
+  "movingDate",
+  "name",
+  "phone",
+];
+
 const FullQuoteForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
+  const [required, setRequired] = useState(false);
   const [formData, setFormData] = useState<{
-    moveFrom: string | null;
-    moveTo: string | null;
-    propertyType: string | null;
-    bedrooms: string | null;
-    movingDate: string | null;
-    flexibility: string | null;
-    name: string | null;
-    phone: string | null;
-    email: string | null;
-    notes: string | null;
+    moveFrom: string;
+    moveTo: string;
+    propertyType: string;
+    bedrooms: string;
+    movingDate: string;
+    flexibility?: string;
+    name: string;
+    phone: string;
+    email?: string;
+    notes?: string;
   }>({
     moveFrom: "",
     moveTo: "",
@@ -62,26 +75,58 @@ const FullQuoteForm = () => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = () => {
-    console.log(formData);
+  const handleSubmit = async () => {
+    const missingFields = requiredFields.filter(
+      (field) => !formData[field as keyof typeof formData],
+    );
+    if (missingFields.length > 0) {
+      toast.warning("Please fill all fields marked with *.", {
+        position: "bottom-center",
+        duration: 5000,
+        style: {
+          background: "#FFC107",
+          color: "#000",
+        },
+      });
+      setRequired(true);
+      setCurrentStep(1);
+    } else {
+      try {
+        const response = await SendMail({ data: { ...formData } });
 
-    setSubmitted(true);
+        if (response.success) {
+          setSubmitted(true);
+          setRequired(false);
+        }
+        if (response.error) {
+          toast.warning(response.error, {
+            position: "bottom-center",
+            duration: 5000,
+            style: {
+              background: "#FFC107",
+              color: "#000",
+            },
+          });
+        }
+      } catch (error) {
+        toast.warning(
+          error instanceof Error ? error.message : "An error occurred.",
+          {
+            position: "bottom-center",
+            duration: 5000,
+            style: {
+              background: "#FFC107",
+              color: "#000",
+            },
+          },
+        );
+      }
+    }
   };
 
   if (submitted) {
     return (
       <>
-        <section className="bg-navy text-white py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav className="flex items-center gap-2 text-sm text-gray-300 mb-4">
-              <Link href="/" className="hover:text-gold transition-colors">
-                Home
-              </Link>
-              <ChevronRight className="w-4 h-4" />
-              <span className="text-gold">Free Quote</span>
-            </nav>
-          </div>
-        </section>
         <section className="py-20 md:py-32">
           <div className="max-w-2xl mx-auto px-4 text-center">
             <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -175,10 +220,14 @@ const FullQuoteForm = () => {
                           htmlFor="moveFrom"
                           className="text-navy font-medium"
                         >
-                          Moving From
+                          Moving From{" "}
+                          <span className="text-red-400">
+                            * {required && "required"}
+                          </span>
                         </Label>
                         <Input
                           id="moveFrom"
+                          required
                           placeholder="e.g., Dubai Marina, JVC, Abu Dhabi"
                           value={String(formData.moveFrom)}
                           onChange={(e) =>
@@ -192,10 +241,14 @@ const FullQuoteForm = () => {
                           htmlFor="moveTo"
                           className="text-navy font-medium"
                         >
-                          Moving To
+                          Moving To{" "}
+                          <span className="text-red-400">
+                            * {required && "required"}
+                          </span>
                         </Label>
                         <Input
                           id="moveTo"
+                          required
                           placeholder="e.g., Palm Jumeirah, Downtown Dubai"
                           value={String(formData.moveTo)}
                           onChange={(e) =>
@@ -220,7 +273,10 @@ const FullQuoteForm = () => {
                     <div className="space-y-4">
                       <div>
                         <Label className="text-navy font-medium">
-                          Property Type
+                          Property Type{" "}
+                          <span className="text-red-400">
+                            * {required && "required"}
+                          </span>
                         </Label>
                         <Select
                           value={formData.propertyType}
@@ -242,7 +298,10 @@ const FullQuoteForm = () => {
                       </div>
                       <div>
                         <Label className="text-navy font-medium">
-                          Number of Bedrooms
+                          Number of Bedrooms{" "}
+                          <span className="text-red-400">
+                            * {required && "required"}
+                          </span>
                         </Label>
                         <Select
                           value={formData.bedrooms}
@@ -282,7 +341,10 @@ const FullQuoteForm = () => {
                           htmlFor="movingDate"
                           className="text-navy font-medium"
                         >
-                          Preferred Moving Date
+                          Preferred Moving Date{" "}
+                          <span className="text-red-400">
+                            * {required && "required"}
+                          </span>
                         </Label>
                         <Input
                           id="movingDate"
@@ -335,7 +397,10 @@ const FullQuoteForm = () => {
                     <div className="space-y-4">
                       <div>
                         <Label htmlFor="name" className="text-navy font-medium">
-                          Full Name
+                          Full Name{" "}
+                          <span className="text-red-400">
+                            * {required && "required"}
+                          </span>
                         </Label>
                         <Input
                           id="name"
@@ -350,7 +415,10 @@ const FullQuoteForm = () => {
                           htmlFor="phone"
                           className="text-navy font-medium"
                         >
-                          Phone Number
+                          Phone Number{" "}
+                          <span className="text-red-400">
+                            * {required && "required"}
+                          </span>
                         </Label>
                         <Input
                           id="phone"
