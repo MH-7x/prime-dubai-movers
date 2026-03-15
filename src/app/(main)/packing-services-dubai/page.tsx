@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     images: ["/ser/Packing-Services-in-Dubai.jpg"],
   },
   alternates: {
-    canonical: "https://primedubaimovers.com/packing-services-dubai",
+    canonical: `${process.env.APP_URL}/packing-services-dubai`,
   },
 };
 

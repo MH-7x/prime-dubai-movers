@@ -21,10 +21,10 @@ export const metadata: Metadata = {
       "Trusted movers and packers in Dubai with 14+ years experience. Residential, commercial & villa moving across all UAE emirates. Get your free quote today!",
     type: "website",
     images: ["/prime-dubai-movers.jpg"],
-    url: "https://primedubaimovers.com",
+    url: process.env.APP_URL,
   },
   alternates: {
-    canonical: "https://primedubaimovers.com",
+    canonical: process.env.APP_URL,
   },
 };
 

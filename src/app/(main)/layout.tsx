@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_AE",
-    url: "https://primedubaimovers.com",
+    url: "process.env.APP_URL",
     siteName: "Prime Dubai Movers",
     title: "Prime Dubai Movers | Best Movers and Packers in Dubai, UAE",
     description:
@@ -71,9 +71,9 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Prime Dubai Movers",
-              url: "https://primedubaimovers.com",
-              logo: "https://primedubaimovers.com/logo.svg",
-              image: "https://primedubaimovers.com/prime-dubai-movers.jpg",
+              url: process.env.APP_URL,
+              logo: `${process.env.APP_URL}/logo.svg`,
+              image: `${process.env.APP_URL}/prime-dubai-movers.jpg`,
               telephone: "+971561046146",
               email: "primedubaimovers.com@gmail.com",
               address: {
@@ -103,7 +103,7 @@ export default function RootLayout({
               name: "Prime Dubai Movers",
               description:
                 "Trusted movers and packers in Dubai with 14+ years experience. Residential, commercial & villa moving across all UAE emirates.",
-              url: "https://primedubaimovers.com",
+              url: process.env.APP_URL,
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Dubai",
@@ -112,7 +112,7 @@ export default function RootLayout({
                 streetAddress:
                   "Office # 702 Al Mustaqbal St - Zaa'beel Second - Za'abeel",
               },
-              image: "https://primedubaimovers.com/prime-dubai-movers.jpg",
+              image: `${process.env.APP_URL}/prime-dubai-movers.jpg`,
               telephone: "+971561046146",
               email: "primedubaimovers.com@gmail.com",
               priceRange: "AED 499 - AED 30,000",

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     images: ["/ser/Cheap-Movers-in-Dubai.jpg"],
   },
   alternates: {
-    canonical: "https://primedubaimovers.com/cheap-movers-dubai",
+    canonical: `${process.env.APP_URL}/cheap-movers-dubai`,
   },
 };
 

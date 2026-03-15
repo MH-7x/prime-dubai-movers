@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     images: ["/ser/Piano-Movers-in-Dubai.jpg"],
   },
   alternates: {
-    canonical: "https://primedubaimovers.com/piano-movers-dubai",
+    canonical: `${process.env.APP_URL}/piano-movers-dubai`,
   },
 };
 

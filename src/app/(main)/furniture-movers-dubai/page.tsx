@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     images: ["/ser/Top-Furniture-Movers-In-Dubai.jpg"],
   },
   alternates: {
-    canonical: "https://primedubaimovers.com/furniture-movers-dubai",
+    canonical: `${process.env.APP_URL}/furniture-movers-dubai`,
   },
 };
 
