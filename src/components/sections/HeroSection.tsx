@@ -1,14 +1,16 @@
 import Link from "next/link";
 import { Phone } from "lucide-react";
 import Image from "next/image";
-
+import imgSrc from "../../../public/prime-dubai-movers.jpg";
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen md:min-h-[600px] flex items-center bg-navy/86">
+    <section className="relative min-h-screen md:min-h-150 flex items-center bg-navy/86">
       <Image
-        src={"/prime-dubai-movers.jpg"}
+        src={imgSrc}
         alt="Prime Dubai Movers and Packers"
         fill
+        loading="eager"
+        placeholder="blur"
         className="object-cover -z-10"
       />
       <div className="relative container-custom w-full py-20 md:py-28">

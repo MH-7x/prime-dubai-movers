@@ -5,11 +5,11 @@ import ServicesOverview from "@/components/sections/ServicesOverview";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import PricingSection from "@/components/sections/PricingSection";
 import LocationCoverage from "@/components/sections/LocationCoverage";
-import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import BlogPreview from "@/components/sections/BlogPreview";
 import CTASection from "@/components/sections/CTASection";
 import FreeQuotePage from "./free-quote/page";
 import ReviewSection from "@/components/sections/ReviewsSection";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Prime Dubai Movers | Best Movers and Packers in Dubai, UAE",
@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     description:
       "Trusted movers and packers in Dubai with 14+ years experience. Residential, commercial & villa moving across all UAE emirates. Get your free quote today!",
     type: "website",
+    images: ["/prime-dubai-movers.jpg"],
     url: "https://primedubaimovers.com",
   },
 };
@@ -88,10 +89,51 @@ export default function HomePage() {
         </div>
       </section>
       <ReviewSection />
+      <section className="max-w-4xl mx-auto my-20">
+        <h2 className="md:text-4xl text-3xl mb-5 text-navy">
+          Choose Prime Movers in Dubai
+        </h2>
+        <p className="md:text-lg mb-2">
+          To hire movers in Dubai, you can find out from your surroundings, your
+          colleagues or your friends may already have used a professional moving
+          company in Dubai.
+        </p>
+        <p className="md:text-lg mb-2">
+          Of course, all moving companies have detailed profiles on the Internet
+          to give a precise idea of the cost that will involve your departure.
+        </p>
+        <p className="md:text-lg mb-2">
+          In order to avoid unpleasant surprises, it is advised to prefer
+          professional movers Dubai who are certified like Prime Dubai Movers.
+        </p>
+      </section>
+      <section className="max-w-4xl mx-auto my-20">
+        <h2 className="md:text-4xl text-3xl mb-5 text-navy">
+          Plan Your Moving ? Contact Prime Dubai Movers
+        </h2>
+        <p className="md:text-lg mb-2">
+          We don&apos;t sacrifice consistency for providing low prices. Expert
+          Movers and packers in Dubai have been operating in the surrounding
+          regions since 2009, with consistent success in changing services.
+        </p>
+        <p className="md:text-lg mb-2">
+          The transport and storage capacity will describe prices. So, get Dubai
+          quotes right now. We offer different services according to the needs
+          of the Customer.
+        </p>
+        <p className="md:text-lg mb-2">
+          Prime Dubai Movers is known for going the extra mile to ensure
+          Customer&apos;s shipping satisfaction. Our support system is always
+          ready to benefit our customers. You can get free of cost quotes at any
+          time you need them with our movers and packers in Dubai.
+        </p>
+      </section>
       <BlogPreview />
       <CTASection />
       {/* Organization Schema */}
-      <script
+      <Script
+        id="organization-schema"
+        strategy="beforeInteractive"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -99,7 +141,7 @@ export default function HomePage() {
             "@type": "Organization",
             name: "Prime Dubai Movers",
             url: "https://primedubaimovers.com",
-            logo: "https://primedubaimovers.com/logo.png",
+            logo: "https://primedubaimovers.com/logo.svg",
             telephone: "+971561046146",
             email: "primedubaimovers.com@gmail.com",
             address: {
@@ -115,7 +157,9 @@ export default function HomePage() {
         }}
       />
       {/* LocalBusiness Schema */}
-      <script
+      <Script
+        id="localBusiness-schema"
+        strategy="beforeInteractive"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -168,7 +212,9 @@ export default function HomePage() {
         }}
       />
       {/* FAQPage Schema */}
-      <script
+      <Script
+        id="faq-schema"
+        strategy="beforeInteractive"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
