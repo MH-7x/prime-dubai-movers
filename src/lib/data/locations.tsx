@@ -23,11 +23,31 @@ export interface LocationData {
   costFactors: string[];
 }
 
+import palm from "../../../public/dub/Movers-and-Packers-in-Palm-Jumeirah.jpg";
+import downtown from "../../../public/dub/Movers-and-Packers-in-Downtown-Dubai.jpg";
+import marina from "../../../public/dub/Movers-and-Packers-in-Dubai-Marina.jpg";
+import jvc from "../../../public/dub/Movers-andPackers-in-JVC-Jumeirah-Village-Circle.jpg";
+import JLT from "../../../public/dub/Movers-and-Packers-in-JLT-Jumeirah-Lake-Towers.jpg";
+import business from "../../../public/dub/Movers-and-Packers-in-Business-Bay.jpg";
+import barsha from "../../../public/dub/Movers-and-Packers-in-Al-Barsha-Dubai.jpg";
+import arabian from "../../../public/dub/Movers-and-Packers-in-Arabian-Ranches.jpg";
+import emirates from "../../../public/dub/Movers-and-Packers-in-Emirates-Hills.jpg";
+import damac from "../../../public/dub/Movers-and-Packers-in-Damac-Hills.jpg";
+import nahda from "../../../public/dub/Movers-and-Packers-in-Al-Nahda-Dubai.jpg";
+import silicon from "../../../public/dub/Movers-and-Packers-in-Dubai-Silicon-Oasis.jpg";
+import bur from "../../../public/dub/Movers-and-Packers-in-Bur-Dubai.jpg";
+import deira from "../../../public/dub/Movers-and-Packers-in-Deira-Dubai.jpg";
+import quoz from "../../../public/dub/Movers-and-Packers-in-Al-Quoz-Dubai.jpg";
+import jvt from "../../../public/dub/Movers-and-Packers-in-JVT-Jumeirah-Village-Triangle.jpg";
+import motor from "../../../public/dub/Movers-and-Packers-in-Motor-City-Dubai.jpg";
+import international from "../../../public/dub/Movers-and-Packers-in-International-City.jpg";
+
 export const dubaiLocations: LocationData[] = [
   {
     slug: "palm-jumeirah",
     name: "Palm Jumeirah",
     emirate: "Dubai",
+    img: palm,
     primaryKeyword: "movers and packers Palm Jumeirah",
     metaTitle: "Movers and Packers in Palm Jumeirah | Prime Dubai Movers",
     metaDescription:
@@ -251,6 +271,7 @@ export const dubaiLocations: LocationData[] = [
     slug: "downtown-dubai",
     name: "Downtown Dubai",
     emirate: "Dubai",
+    img: downtown,
     primaryKeyword: "movers and packers Downtown Dubai",
     metaTitle: "Movers and Packers in Downtown Dubai | Prime Dubai Movers",
     metaDescription:
@@ -487,6 +508,7 @@ export const dubaiLocations: LocationData[] = [
     slug: "dubai-marina",
     name: "Dubai Marina",
     emirate: "Dubai",
+    img: marina,
     primaryKeyword: "movers and packers Dubai Marina",
     metaTitle: "Movers and Packers in Dubai Marina | Prime Dubai Movers",
     metaDescription:
@@ -730,6 +752,7 @@ export const dubaiLocations: LocationData[] = [
     slug: "jvc",
     name: "JVC (Jumeirah Village Circle)",
     emirate: "Dubai",
+    img: jvc,
     primaryKeyword: "movers and packers in JVC",
     metaTitle: "Movers and Packers in JVC | Prime Dubai Movers",
     metaDescription:
@@ -961,6 +984,7 @@ export const dubaiLocations: LocationData[] = [
     slug: "jlt",
     name: "JLT (Jumeirah Lake Towers)",
     emirate: "Dubai",
+    img: JLT,
     primaryKeyword: "movers and packers JLT",
     metaTitle: "Movers and Packers in JLT | Prime Dubai Movers",
     metaDescription:
@@ -1185,6 +1209,7 @@ export const dubaiLocations: LocationData[] = [
     slug: "business-bay",
     name: "Business Bay",
     emirate: "Dubai",
+    img: business,
     primaryKeyword: "movers and packers Business Bay",
     metaTitle: "Movers and Packers in Business Bay | Prime Dubai Movers",
     metaDescription:
@@ -1412,6 +1437,7 @@ export const dubaiLocations: LocationData[] = [
     slug: "al-barsha",
     name: "Al Barsha",
     emirate: "Dubai",
+    img: barsha,
     primaryKeyword: "movers and packers Al Barsha",
     metaTitle: "Movers and Packers in Al Barsha | Prime Dubai Movers",
     metaDescription:
@@ -1624,6 +1650,7 @@ export const dubaiLocations: LocationData[] = [
     slug: "arabian-ranches",
     name: "Arabian Ranches",
     emirate: "Dubai",
+    img: arabian,
     primaryKeyword: "movers and packers Arabian Ranches",
     metaTitle: "Movers and Packers in Arabian Ranches | Prime Dubai Movers",
     metaDescription:
@@ -1838,6 +1865,7 @@ export const dubaiLocations: LocationData[] = [
     slug: "emirates-hills",
     name: "Emirates Hills",
     emirate: "Dubai",
+    img: emirates,
     primaryKeyword: "movers and packers Emirates Hills",
     metaTitle: "Movers and Packers in Emirates Hills | Prime Dubai Movers",
     metaDescription:
@@ -2042,6 +2070,7 @@ export const dubaiLocations: LocationData[] = [
     slug: "damac-hills",
     name: "Damac Hills",
     emirate: "Dubai",
+    img: damac,
     primaryKeyword: "movers packers Damac Hills",
     metaTitle: "Movers and Packers in Damac Hills | Prime Dubai Movers",
     metaDescription:
@@ -2240,6 +2269,7 @@ export const dubaiLocations: LocationData[] = [
     slug: "al-nahda",
     name: "Al Nahda Dubai",
     emirate: "Dubai",
+    img: nahda,
     primaryKeyword: "movers and packers Al Nahda",
     metaTitle: "Movers and Packers in Al Nahda Dubai | Prime Dubai Movers",
     metaDescription:
@@ -2445,6 +2475,7 @@ export const dubaiLocations: LocationData[] = [
     slug: "silicon-oasis",
     name: "Dubai Silicon Oasis",
     emirate: "Dubai",
+    img: silicon,
     primaryKeyword: "movers packers Silicon Oasis",
     metaTitle: "Movers and Packers in Silicon Oasis | Prime Dubai Movers",
     metaDescription:
@@ -2639,6 +2670,7 @@ export const dubaiLocations: LocationData[] = [
     slug: "bur-dubai",
     name: "Bur Dubai",
     emirate: "Dubai",
+    img: bur,
     primaryKeyword: "movers and packers Bur Dubai",
     metaTitle: "Movers and Packers in Bur Dubai | Prime Dubai Movers",
     metaDescription:
@@ -2841,6 +2873,7 @@ export const dubaiLocations: LocationData[] = [
     slug: "deira",
     name: "Deira",
     emirate: "Dubai",
+    img: deira,
     primaryKeyword: "movers and packers Deira",
     metaTitle: "Movers and Packers in Deira | Prime Dubai Movers",
     metaDescription:
@@ -3037,6 +3070,7 @@ export const dubaiLocations: LocationData[] = [
     slug: "al-quoz",
     name: "Al Quoz",
     emirate: "Dubai",
+    img: quoz,
     primaryKeyword: "movers packers Al Quoz",
     metaTitle: "Movers and Packers in Al Quoz | Prime Dubai Movers",
     metaDescription:
@@ -3232,6 +3266,7 @@ export const dubaiLocations: LocationData[] = [
     slug: "jvt",
     name: "JVT (Jumeirah Village Triangle)",
     emirate: "Dubai",
+    img: jvt,
     primaryKeyword: "movers and packers JVT",
     metaTitle: "Movers and Packers in JVT | Prime Dubai Movers",
     metaDescription:
@@ -3430,6 +3465,7 @@ export const dubaiLocations: LocationData[] = [
     slug: "motor-city",
     name: "Motor City",
     emirate: "Dubai",
+    img: motor,
     primaryKeyword: "movers and packers Motor City",
     metaTitle: "Movers and Packers in Motor City | Prime Dubai Movers",
     metaDescription:
@@ -3620,6 +3656,7 @@ export const dubaiLocations: LocationData[] = [
     slug: "international-city",
     name: "International City",
     emirate: "Dubai",
+    img: international,
     primaryKeyword: "movers packers International City",
     metaTitle: "Movers and Packers in International City | Prime Dubai Movers",
     metaDescription:
