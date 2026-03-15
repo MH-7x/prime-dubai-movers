@@ -16,6 +16,10 @@ export const metadata: Metadata = {
       service?.metaDescription ||
       "Professional cheap movers and packers Dubai with expert packing, safe transport & on-time delivery. Licensed & insured. Get your free quote!",
     type: "website",
+    images: ["/ser/Cheap-Movers-in-Dubai.jpg"],
+  },
+  alternates: {
+    canonical: "https://primedubaimovers.com/cheap-movers-dubai",
   },
 };
 

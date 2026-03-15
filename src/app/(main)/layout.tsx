@@ -5,6 +5,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import { Toaster } from "@/components/ui/sonner";
+import Script from "next/script";
 const inter = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
@@ -13,12 +14,6 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Prime Dubai Movers | Best Movers and Packers in Dubai, UAE",
-    template: "%s | Prime Dubai Movers",
-  },
-  description:
-    "Trusted movers and packers in Dubai with 14+ years experience. Residential, commercial & villa moving across all UAE emirates. Get your free quote today!",
   keywords: [
     "movers and packers in Dubai",
     "best movers Dubai",
@@ -67,6 +62,99 @@ export default function RootLayout({
         <Footer />
         <WhatsAppButton />
         <Toaster />
+        <Script
+          id="organization-schema"
+          strategy="beforeInteractive"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Prime Dubai Movers",
+              url: "https://primedubaimovers.com",
+              logo: "https://primedubaimovers.com/logo.svg",
+              image: "https://primedubaimovers.com/prime-dubai-movers.jpg",
+              telephone: "+971561046146",
+              email: "primedubaimovers.com@gmail.com",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Dubai",
+                addressCountry: "AE",
+                postalCode: "00000",
+                streetAddress:
+                  "Office # 702 Al Mustaqbal St - Zaa'beel Second - Za'abeel",
+              },
+              sameAs: [
+                "https://www.facebook.com/primedubaimovers",
+                "https://www.instagram.com/primedubaimovers",
+              ],
+            }),
+          }}
+        />
+        {/* LocalBusiness Schema */}
+        <Script
+          id="localBusiness-schema"
+          strategy="beforeInteractive"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "Prime Dubai Movers",
+              description:
+                "Trusted movers and packers in Dubai with 14+ years experience. Residential, commercial & villa moving across all UAE emirates.",
+              url: "https://primedubaimovers.com",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Dubai",
+                addressCountry: "AE",
+                postalCode: "00000",
+                streetAddress:
+                  "Office # 702 Al Mustaqbal St - Zaa'beel Second - Za'abeel",
+              },
+              image: "https://primedubaimovers.com/prime-dubai-movers.jpg",
+              telephone: "+971561046146",
+              email: "primedubaimovers.com@gmail.com",
+              priceRange: "AED 499 - AED 30,000",
+              areaServed: [
+                { "@type": "State", name: "Dubai" },
+                { "@type": "State", name: "Abu Dhabi" },
+                { "@type": "State", name: "Sharjah" },
+                { "@type": "State", name: "Ajman" },
+                { "@type": "State", name: "Ras Al Khaimah" },
+                { "@type": "State", name: "Fujairah" },
+                { "@type": "State", name: "Umm Al Quwain" },
+              ],
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: [
+                    "Saturday",
+                    "Sunday",
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                  ],
+                  opens: "08:00",
+                  closes: "20:00",
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: "Friday",
+                  opens: "09:00",
+                  closes: "17:00",
+                },
+              ],
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "4.9",
+                reviewCount: "2847",
+                bestRating: "5",
+              },
+            }),
+          }}
+        />
       </body>
     </html>
   );

@@ -330,7 +330,7 @@ export const services: ServiceData[] = [
     slug: "apartment-movers-dubai",
     name: "Apartment Moving",
     primaryKeyword: "apartment movers in Dubai",
-    metaTitle: "Apartment Movers in Dubai | Fast & Affordable | Prime Dubai Movers",
+    metaTitle: "Apartment Movers in Dubai | Fast & Affordable",
     metaDescription:
       "Professional apartment movers in Dubai for studios, 1BHK to 4BHK. Elevator coordination, packing & setup included. Same-day quotes available!",
     heroHeadline: "Reliable Apartment Movers in Dubai for Quick, Hassle-Free Moves",

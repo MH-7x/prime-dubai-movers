@@ -16,6 +16,10 @@ export const metadata: Metadata = {
       service?.metaDescription ||
       "Professional house movers in Dubai with expert packing, safe transport & on-time delivery. Licensed & insured. Get your free quote!",
     type: "website",
+    images: ["/ser/Trusted-House-Movers-in-Dubai.jpg"],
+  },
+  alternates: {
+    canonical: "https://primedubaimovers.com/house-movers-dubai",
   },
 };
 

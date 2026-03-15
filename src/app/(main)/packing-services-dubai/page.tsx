@@ -17,6 +17,10 @@ export const metadata: Metadata = {
       service?.metaDescription ||
       "Professional packing services Dubai with expert packing, safe transport & on-time delivery. Licensed & insured. Get your free quote!",
     type: "website",
+    images: ["/ser/Packing-Services-in-Dubai.jpg"],
+  },
+  alternates: {
+    canonical: "https://primedubaimovers.com/packing-services-dubai",
   },
 };
 

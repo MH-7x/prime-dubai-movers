@@ -1,4 +1,4 @@
-"use client";
+/* eslint-disable @next/next/no-before-interactive-script-outside-document */
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -40,6 +40,8 @@ import {
   Zap,
 } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
+import Script from "next/script";
+import ReviewSection from "./ReviewsSection";
 
 const iconMap: Record<string, React.ElementType> = {
   Shield,
@@ -95,24 +97,6 @@ export default function ServicePageTemplate({
 
   // Get a subset of locations across different emirates
   const displayLocations = allLocations.slice(0, 24);
-
-  const placeholderTestimonials = [
-    {
-      name: "Fatima A.",
-      rating: 5,
-      text: `Prime Dubai Movers made our ${service.name.toLowerCase()} experience absolutely seamless. The team arrived on time, handled everything with care, and finished ahead of schedule. Highly recommended!`,
-    },
-    {
-      name: "Michael T.",
-      rating: 5,
-      text: `We were nervous about our move, but the professionalism of the Prime Dubai Movers crew put us at ease immediately. Their ${service.name.toLowerCase()} service was worth every dirham.`,
-    },
-    {
-      name: "Rashid K.",
-      rating: 5,
-      text: `Outstanding service from start to finish. The team was courteous, efficient, and went above and beyond during our ${service.name.toLowerCase()} process. Will definitely use again.`,
-    },
-  ];
 
   const offeringIcons = [
     Package,
@@ -372,39 +356,7 @@ export default function ServicePageTemplate({
       </section>
 
       {/* 8. Customer Testimonials */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-extrabold text-navy mb-4">
-              What Our Customers Say
-            </h2>
-            <p className="text-body max-w-2xl mx-auto">
-              Real feedback from clients who trusted us with their{" "}
-              {service.name.toLowerCase()} needs.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {placeholderTestimonials.map((testimonial, index) => (
-              <Card key={index} className="border border-gray-100">
-                <CardContent className="pt-6">
-                  <div className="flex gap-1 mb-4">
-                    {Array.from({ length: testimonial.rating }).map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-gold text-gold" />
-                    ))}
-                  </div>
-                  <p className="text-body text-sm mb-4 italic">
-                    &ldquo;{testimonial.text}&rdquo;
-                  </p>
-                  <p className="text-navy font-medium text-sm">
-                    {testimonial.name}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ReviewSection />
 
       {/* 9. FAQ Section */}
       <section className="py-16 md:py-24 bg-off-white">
@@ -435,7 +387,25 @@ export default function ServicePageTemplate({
           </div>
         </div>
       </section>
-
+      <Script
+        id="faq-schema"
+        strategy="beforeInteractive"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: service.faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
       {/* 10. CTA Block */}
       <section className="py-16 md:py-24 bg-navy">
         <div className="container mx-auto px-4">

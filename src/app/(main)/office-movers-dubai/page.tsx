@@ -16,6 +16,10 @@ export const metadata: Metadata = {
       service?.metaDescription ||
       "Professional office movers Dubai with expert packing, safe transport & on-time delivery. Licensed & insured. Get your free quote!",
     type: "website",
+    images: ["/ser/Office-Movers-In-Dubai-Prime-Movers.jpg"],
+  },
+  alternates: {
+    canonical: "https://primedubaimovers.com/office-movers-dubai",
   },
 };
 

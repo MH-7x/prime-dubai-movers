@@ -17,6 +17,10 @@ export const metadata: Metadata = {
       service?.metaDescription ||
       "Professional furniture movers Dubai with expert packing, safe transport & on-time delivery. Licensed & insured. Get your free quote!",
     type: "website",
+    images: ["/ser/Top-Furniture-Movers-In-Dubai.jpg"],
+  },
+  alternates: {
+    canonical: "https://primedubaimovers.com/furniture-movers-dubai",
   },
 };
 

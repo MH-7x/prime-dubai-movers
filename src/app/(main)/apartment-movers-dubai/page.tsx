@@ -17,6 +17,10 @@ export const metadata: Metadata = {
       service?.metaDescription ||
       "Professional apartment movers in Dubai with expert packing, safe transport & on-time delivery. Licensed & insured. Get your free quote!",
     type: "website",
+    images: ["/ser/Apartment-Movers-in-Dubai.jpg"],
+  },
+  alternates: {
+    canonical: "https://primedubaimovers.com/apartment-movers-dubai",
   },
 };
 
