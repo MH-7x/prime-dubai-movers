@@ -5,7 +5,6 @@ import ServicesOverview from "@/components/sections/ServicesOverview";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import PricingSection from "@/components/sections/PricingSection";
 import LocationCoverage from "@/components/sections/LocationCoverage";
-import BlogPreview from "@/components/sections/BlogPreview";
 import CTASection from "@/components/sections/CTASection";
 import FreeQuotePage from "./free-quote/page";
 import ReviewSection from "@/components/sections/ReviewsSection";
@@ -131,7 +130,7 @@ export default function HomePage() {
           time you need them with our movers and packers in Dubai.
         </p>
       </section>
-      <BlogPreview />
+
       <CTASection />
       {/* Organization Schema */}
 

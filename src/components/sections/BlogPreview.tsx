@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, Calendar } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
 
 const blogPosts = [
   {
@@ -10,6 +11,7 @@ const blogPosts = [
     date: "March 5, 2026",
     href: "/blog",
     alt: "Moving cost calculator and pricing guide for Dubai relocations",
+    src: "/blog/How-Much-Do-Movers-Cost-in-Dubai-2026-Guide.jpg",
   },
   {
     title: "House Moving Checklist: Complete Guide",
@@ -18,6 +20,7 @@ const blogPosts = [
     date: "February 28, 2026",
     href: "/blog",
     alt: "Complete house moving checklist for UAE residents",
+    src: "/blog/House-Moving-Checklist-Complete-Guide.jpg",
   },
   {
     title: "How to Choose the Best Movers in Dubai",
@@ -26,6 +29,7 @@ const blogPosts = [
     date: "February 20, 2026",
     href: "/blog",
     alt: "Guide to choosing the best professional movers in Dubai",
+    src: "/blog/How-to-Choose-the-Best-Movers-in-Dubai.jpg",
   },
 ];
 
@@ -51,10 +55,13 @@ export default function BlogPreview() {
               className="border-0 shadow-sm hover:shadow-lg transition-shadow overflow-hidden group pt-0"
             >
               {/* Replace with actual blog image */}
-              <div className="bg-gray-200 w-full aspect-4/3 flex items-center justify-center text-gray-500 text-sm">
-                <span className="px-4 text-center">
-                  Placeholder: {post.alt}
-                </span>
+              <div className="bg-gray-200 w-full aspect-video relative overflow-hidden">
+                <Image
+                  src={post.src}
+                  alt={post.alt}
+                  fill
+                  className="object-cover"
+                />
               </div>
               <CardContent className="p-6">
                 <div className="flex items-center gap-2 text-sm text-body mb-3">
@@ -69,7 +76,8 @@ export default function BlogPreview() {
                 </p>
                 <Link
                   href={post.href}
-                  className="text-gold font-medium text-sm inline-flex items-center gap-1 hover:gap-2 transition-all"
+                  className="text-gold-dark font-medium text-sm inline-flex items-center gap-1 hover:gap-2 transition-all"
+                  title={post.title}
                 >
                   Read More <ArrowRight className="w-4 h-4" />
                 </Link>

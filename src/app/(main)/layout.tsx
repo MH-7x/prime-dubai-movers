@@ -6,6 +6,8 @@ import Footer from "@/components/layout/Footer";
 import { Toaster } from "@/components/ui/sonner";
 import Script from "next/script";
 import ActionButton from "@/components/ActionButtons";
+import BlogPreview from "@/components/sections/BlogPreview";
+import GTM from "@/components/GTM";
 const inter = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
@@ -59,12 +61,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <GTM />
       <body className={`${inter.className}  antialiased `}>
         <Header />
         <main className="overflow-hidden">{children}</main>
+        <BlogPreview />
         <Footer />
+
         <ActionButton />
         <Toaster />
+
         <Script
           id="organization-schema"
           strategy="beforeInteractive"
