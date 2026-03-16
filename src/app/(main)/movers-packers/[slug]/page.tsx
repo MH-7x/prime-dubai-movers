@@ -21,6 +21,8 @@ import {
 import { allLocations, getLocationBySlug } from "@/lib/data/locations";
 import FreeQuotePage from "@/app/(main)/free-quote/page";
 import Image from "next/image";
+import Script from "next/script";
+import ReviewSection from "@/components/sections/ReviewsSection";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -42,10 +44,14 @@ export async function generateMetadata({
   return {
     title: location.metaTitle,
     description: location.metaDescription,
+    alternates: {
+      canonical: `${process.env.APP_URL}/movers-packers/${slug}`,
+    },
     openGraph: {
       title: location.metaTitle,
       description: location.metaDescription,
       type: "website",
+      images: [location.img?.src || "/prime-dubai-movers.jpg"],
     },
   };
 }
@@ -125,7 +131,7 @@ export default async function LocationPage({ params }: PageProps) {
               <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-6">
                 Professional Moving Services in {location.name}
               </h2>
-              <p className="text-body leading-relaxed text-lg">
+              <p className="text-body leading-relaxed md:text-lg">
                 {location.areaIntro}
               </p>
               <div className="my-12 bg-gold-light w-full aspect-video rounded-3xl relative overflow-hidden">
@@ -330,31 +336,7 @@ export default async function LocationPage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-16 md:py-20 bg-off-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-navy mb-10 text-center">
-            Customer Reviews from {location.name}
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {location.testimonials.map((review, idx) => (
-              <Card key={idx} className="border-0 shadow-sm">
-                <CardContent className="p-6">
-                  <div className="flex gap-1 mb-4">
-                    {Array.from({ length: review.rating }).map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-gold text-gold" />
-                    ))}
-                  </div>
-                  <p className="text-body mb-4 italic">
-                    &ldquo;{review.text}&rdquo;
-                  </p>
-                  <p className="font-medium text-navy">{review.name}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ReviewSection />
 
       {/* FAQ Section */}
       <section className="py-16 md:py-20">
@@ -454,47 +436,10 @@ export default async function LocationPage({ params }: PageProps) {
       </section>
 
       {/* Schema Markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            name: "Prime Dubai Movers",
-            description: location.metaDescription,
-            url: `${process.env.APP_URL}/movers-packers/${location.slug}`,
-            telephone: "+971561046146",
-            email: "primedubaimovers.com@gmail.com",
-            areaServed: {
-              "@type": "Place",
-              name: location.name,
-            },
-            priceRange: "AED 499 - AED 30,000",
-            openingHoursSpecification: [
-              {
-                "@type": "OpeningHoursSpecification",
-                dayOfWeek: [
-                  "Saturday",
-                  "Sunday",
-                  "Monday",
-                  "Tuesday",
-                  "Wednesday",
-                  "Thursday",
-                ],
-                opens: "08:00",
-                closes: "20:00",
-              },
-              {
-                "@type": "OpeningHoursSpecification",
-                dayOfWeek: "Friday",
-                opens: "09:00",
-                closes: "17:00",
-              },
-            ],
-          }),
-        }}
-      />
-      <script
+
+      <Script
+        id="faq-schema"
+        strategy="beforeInteractive"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -511,7 +456,9 @@ export default async function LocationPage({ params }: PageProps) {
           }),
         }}
       />
-      <script
+      <Script
+        id="BreadcrumbList"
+        strategy="beforeInteractive"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
