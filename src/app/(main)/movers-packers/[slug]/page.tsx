@@ -51,6 +51,7 @@ export async function generateMetadata({
       title: location.metaTitle,
       description: location.metaDescription,
       type: "website",
+      url: `${process.env.APP_URL}/movers-packers/${slug}`,
       images: [location.img?.src || "/prime-dubai-movers.jpg"],
     },
   };

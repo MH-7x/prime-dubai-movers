@@ -14,13 +14,23 @@ import {
   HandHeart,
   Leaf,
   Phone,
-  Mail,
 } from "lucide-react";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About Us | Prime Dubai Movers",
   description:
     "Learn about Prime Dubai Movers — UAE's trusted moving company with 14+ years of experience. Licensed, insured, and committed to stress-free relocations across all 7 emirates.",
+  openGraph: {
+    title: "About Us | Prime Dubai Movers",
+    description:
+      "Learn about Prime Dubai Movers — UAE's trusted moving company with 14+ years of experience. Licensed, insured, and committed to stress-free relocations across all 7 emirates.",
+    url: `${process.env.APP_URL}/about`,
+    images: ["/rime-dubai-movers-professional-team-dubai-marina-about-us.jpg"],
+  },
+  alternates: {
+    canonical: `${process.env.APP_URL}/about`,
+  },
 };
 
 const differentiators = [
@@ -142,9 +152,16 @@ export default function AboutPage() {
                 moving services in the UAE.
               </p>
             </div>
-            <div className="bg-gray-200 w-full aspect-[3/4] rounded-lg flex items-center justify-center text-gray-500">
-              {/* Replace with actual image */}
-              <span>Placeholder: Prime Dubai Movers team at work</span>
+            <div className="bg-gray-200 w-full aspect-3/4 rounded-lg relative overflow-hidden">
+              <Image
+                src={
+                  "/rime-dubai-movers-professional-team-dubai-marina-about-us.jpg"
+                }
+                alt="Prime Dubai Movers Professional Team Dubai Marina"
+                fill
+                loading="eager"
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -238,47 +255,62 @@ export default function AboutPage() {
 
       {/* Certifications & Trust Section */}
       <section className="section-padding ">
-        <div className="container-custom">
-          <h2 className="text-center mb-12">Certifications & Trust</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <div className="mx-auto mb-4 w-14 h-14 bg-navy/10 rounded-full flex items-center justify-center">
-                  <ShieldCheck className="w-7 h-7 text-navy" />
-                </div>
-                <h4 className="text-base mb-2">Dubai Municipality Licensed</h4>
-                <p className="text-sm">
-                  Fully licensed and regulated by Dubai Municipality to operate
-                  moving services across the emirate.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <div className="mx-auto mb-4 w-14 h-14 bg-navy/10 rounded-full flex items-center justify-center">
-                  <Award className="w-7 h-7 text-navy" />
-                </div>
-                <h4 className="text-base mb-2">ISO Certified Standards</h4>
-                <p className="text-sm">
-                  Our operations adhere to ISO quality management standards,
-                  ensuring consistent and reliable service delivery.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <div className="mx-auto mb-4 w-14 h-14 bg-navy/10 rounded-full flex items-center justify-center">
-                  <Users className="w-7 h-7 text-navy" />
-                </div>
-                <h4 className="text-base mb-2">
-                  International Movers Association
-                </h4>
-                <p className="text-sm">
-                  Proud member of the International Association of Movers,
-                  connecting us to a global network of relocation professionals.
-                </p>
-              </CardContent>
-            </Card>
+        <h2 className="text-center mb-12">Certifications & Trust</h2>
+        <div className="container-custom grid md:grid-cols-2 grid-cols-1 gap-10 items-center">
+          <div>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              <Card className="text-center md:col-span-2 col-span-full">
+                <CardContent className="pt-6">
+                  <div className="mx-auto mb-4 w-14 h-14 bg-navy/10 rounded-full flex items-center justify-center">
+                    <ShieldCheck className="w-7 h-7 text-navy" />
+                  </div>
+                  <h4 className="text-base mb-2">
+                    Dubai Municipality Licensed
+                  </h4>
+                  <p className="text-sm">
+                    Fully licensed and regulated by Dubai Municipality to
+                    operate moving services across the emirate.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="text-center md:col-span-2 col-span-full">
+                <CardContent className="pt-6">
+                  <div className="mx-auto mb-4 w-14 h-14 bg-navy/10 rounded-full flex items-center justify-center">
+                    <Award className="w-7 h-7 text-navy" />
+                  </div>
+                  <h4 className="text-base mb-2">ISO Certified Standards</h4>
+                  <p className="text-sm">
+                    Our operations adhere to ISO quality management standards,
+                    ensuring consistent and reliable service delivery.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="text-center md:col-span-4 col-span-full">
+                <CardContent className="pt-6">
+                  <div className="mx-auto mb-4 w-14 h-14 bg-navy/10 rounded-full flex items-center justify-center">
+                    <Users className="w-7 h-7 text-navy" />
+                  </div>
+                  <h4 className="text-base mb-2">
+                    International Movers Association
+                  </h4>
+                  <p className="text-sm">
+                    Proud member of the International Association of Movers,
+                    connecting us to a global network of relocation
+                    professionals.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+          <div className="bg-gold-light rounded-3xl md:h-full md:aspect-auto aspect-4/3 relative overflow-hidden">
+            <Image
+              src={
+                "/prime-dubai-movers-team-fleet-dubai-skyline-trusted-movers-uae.jpg"
+              }
+              alt="team fleet dubai skyline trusted movers uae"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
       </section>

@@ -1,20 +1,24 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Phone,
-  Mail,
-  MessageCircle,
-  MapPin,
-  Clock,
-  ChevronDown,
-} from "lucide-react";
-import ContactForm from "./ContactForm";
+import { Phone, Mail, MessageCircle, MapPin } from "lucide-react";
+import FullQuoteForm from "@/components/FullQuoteForm";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Contact Us | Prime Dubai Movers",
   description:
     "Get in touch with Prime Dubai Movers for a free moving quote. Call, email, or WhatsApp us. Available Saturday to Thursday 8AM-8PM. Dubai's trusted movers and packers.",
+  alternates: {
+    canonical: `${process.env.APP_URL}/contact`,
+  },
+  openGraph: {
+    type: "website",
+    title: "Contact Us | Prime Dubai Movers",
+    description:
+      "Get in touch with Prime Dubai Movers for a free moving quote. Call, email, or WhatsApp us. Available Saturday to Thursday 8AM-8PM. Dubai's trusted movers and packers.",
+    url: `${process.env.APP_URL}/contact`,
+    images: [`/prime-dubai-movers.jpg`],
+  },
 };
 
 const contactInfo = [
@@ -131,33 +135,36 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form & Map Section */}
-      <section className="section-padding bg-off-white">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 ">
-            {/* Contact Form */}
-            <div>
-              <h2 className="mb-2">Send Us a Message</h2>
-              <p className="text-body mb-8">
-                Fill out the form below and we will get back to you as soon as
-                possible.
-              </p>
-              <ContactForm />
-            </div>
+      <FullQuoteForm />
 
-            {/* Map Placeholder */}
-            <div>
-              <h2 className="mb-2">Visit Our Location</h2>
-              <p className="text-body mb-8">
-                Find us at 123 Main Street, Dubai, United Arab Emirates
-              </p>
-              <div className="bg-white  h-[453px]  rounded-lg shadow-sm border  ">
-                {/* Replace with actual Google Maps embed */}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d898.7546376380693!2d55.27908210939592!3d25.204840510705274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f4284e8dc04d9%3A0x8d10139ba0acaa7!2s3%2035a%20St%20-%20Zaa&#39;beel%20Second%20-%20Za&#39;abeel%20-%20Dubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1773651061390!5m2!1sen!2s"
+        title="Prime Dubai Movers Office Location"
+        allowFullScreen
+        loading="lazy"
+        className="max-w-5xl mx-auto aspect-video my-10"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
 
+      <Script
+        id="faq-schema"
+        strategy="beforeInteractive"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
       {/* FAQ Section */}
       <section className="section-padding bg-white">
         <div className="mx-auto max-w-2xl">

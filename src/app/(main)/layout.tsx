@@ -39,6 +39,9 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    "max-image-preview": "large",
+    "max-snippet": -1,
+
     googleBot: {
       index: true,
       follow: true,
@@ -81,8 +84,7 @@ export default function RootLayout({
                 addressLocality: "Dubai",
                 addressCountry: "AE",
                 postalCode: "00000",
-                streetAddress:
-                  "Office # 702 Al Mustaqbal St - Zaa'beel Second - Za'abeel",
+                streetAddress: "3 35a St - Zaa'beel Second - Za'abeel",
               },
               sameAs: [
                 "https://www.facebook.com/primedubaimovers",
