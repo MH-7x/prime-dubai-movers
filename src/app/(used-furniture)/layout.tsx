@@ -1,6 +1,15 @@
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { CodeSquare } from "lucide-react";
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import Link from "next/link";
+
+const inter = Inter({
+  variable: "--font-sans",
+  subsets: ["latin"],
+  weight: ["400", "500", "700", "800"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   authors: [{ name: "Best Used Furniture Buyers" }],
@@ -40,7 +49,7 @@ export default function UsedFurnitureLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className={`min-h-screen flex flex-col bg-white ${inter.className}`}>
       {/* UF Header */}
       <header className="bg-[#1E3A5F] border-b border-white/10 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -112,10 +121,9 @@ export default function UsedFurnitureLayout({
           </div>
         </div>
       </header>
-
       {/* Page content */}
       <main className="flex-1">{children}</main>
-
+      <FloatingWhatsApp />
       {/* UF Footer */}
       <footer className="bg-[#1E3A5F] text-slate-400 border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

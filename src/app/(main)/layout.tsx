@@ -3,9 +3,9 @@ import { Inter } from "next/font/google";
 import "../globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import { Toaster } from "@/components/ui/sonner";
 import Script from "next/script";
+import ActionButton from "@/components/ActionButtons";
 const inter = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
@@ -63,7 +63,7 @@ export default function RootLayout({
         <Header />
         <main className="overflow-hidden">{children}</main>
         <Footer />
-        <WhatsAppButton />
+        <ActionButton />
         <Toaster />
         <Script
           id="organization-schema"
