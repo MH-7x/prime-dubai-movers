@@ -22,6 +22,15 @@ const footerServices = [
   { name: "Packing Services", href: "/packing-services-dubai" },
 ];
 
+const locations = [
+  { href: "/used-furniture-buyers-dubai", label: "Dubai" },
+  { href: "/used-furniture-buyers-abu-dhabi", label: "Abu Dhabi" },
+  { href: "/used-furniture-buyers-sharjah", label: "Sharjah" },
+  { href: "/used-furniture-buyers-ajman", label: "Ajman" },
+  { href: "/used-furniture-buyers-al-ain", label: "Al Ain" },
+  { href: "/used-furniture-buyers-ras-al-khaimah", label: "Ras Al Khaimah" },
+];
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -29,9 +38,9 @@ export default function Footer() {
     <footer className="bg-navy text-white border-t-4 border-gold-light">
       {/* Main Footer */}
       <div className="container-custom section-padding">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-10 lg:gap-8">
           {/* Column 1: Company Info */}
-          <div className="sm:col-span-2 lg:col-span-1">
+          <div className="md:col-span-2">
             <Link href="/" className="inline-block mb-4">
               <span className="text-xl font-extrabold tracking-tight">
                 <span className="text-gold">PRIME</span>{" "}
@@ -103,6 +112,25 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Column 4: Used Furniture */}
+          <div>
+            <h4 className="text-base font-extrabold text-white mb-4">
+              Used Furniture
+            </h4>
+            <ul className="flex flex-col gap-2.5">
+              {locations.map((service) => (
+                <li key={service.label}>
+                  <Link
+                    href={service.href}
+                    className="text-sm text-gray-300 hover:text-gold transition-colors duration-200"
+                  >
+                    {service.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Column 4: Contact Info */}
           <div>
             <h4 className="text-base font-extrabold text-white mb-4">
@@ -134,8 +162,7 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <Clock className="size-4 text-gold mt-0.5 shrink-0" />
                 <div className="text-sm text-gray-300">
-                  <p>Sat - Thu: 8AM - 8PM</p>
-                  <p>Fri: 9AM - 5PM</p>
+                  <p>Sat - Thu: 8AM - 8PM, Fri: 9AM - 5PM</p>
                 </div>
               </li>
             </ul>
@@ -163,6 +190,13 @@ export default function Footer() {
               Terms of Service
             </Link>
           </div>
+          <a
+            href="https://wa.me/+923471309916?text=Hello%20Mashal,%20I%20Need%20Your%20Service%20!"
+            rel="noopener noreferrer"
+            className="hover:text-gold transition-colors duration-200 md:inline block"
+          >
+            Design & Maintenance by <span>Mashal Huraira</span>
+          </a>
         </div>
       </div>
     </footer>

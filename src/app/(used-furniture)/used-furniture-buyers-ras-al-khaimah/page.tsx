@@ -12,6 +12,7 @@ import {
   UFFAQ,
   UFCTASection,
 } from "@/components/used-furniture";
+import Script from "next/script";
 
 const loc = getUFLocationBySlug("used-furniture-buyers-ras-al-khaimah");
 
@@ -19,15 +20,19 @@ export const metadata: Metadata = loc
   ? {
       title: loc.metaTitle,
       description: loc.metaDescription,
-      alternates: { canonical: loc.canonicalPath },
+      alternates: { canonical: process.env.APP_URL + loc.canonicalPath },
       openGraph: {
         title: loc.metaTitle,
         description: loc.metaDescription,
         type: "website",
         locale: "en_AE",
+        url: process.env.APP_URL + loc.canonicalPath,
+        images: ["/fur/Used-Furniture-Buyers-in-Ras-Al-Khaimah.jpg"],
       },
     }
   : {};
+
+import heroImage from "../../../../public/fur/Used-Furniture-Buyers-in-Ras-Al-Khaimah.jpg";
 
 export default function UsedFurnitureBuyersRasAlKhaimahPage() {
   if (!loc) notFound();
@@ -48,10 +53,10 @@ export default function UsedFurnitureBuyersRasAlKhaimahPage() {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "Dubai Furniture Buyers",
+    name: "Used Furniture Buyers in Ras Al Khaimah",
     description: loc.metaDescription,
-    url: `https://www.dubaifurniturebuyers.com${loc.canonicalPath}`,
-    telephone: "+971-50-123-4567",
+    url: `${process.env.APP_URL}${loc.canonicalPath}`,
+    telephone: "+971561046146",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Ras Al Khaimah",
@@ -68,28 +73,47 @@ export default function UsedFurnitureBuyersRasAlKhaimahPage() {
 
   return (
     <>
-      <script
+      <Script
+        id="faqSchema"
+        strategy="beforeInteractive"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <script
+      <Script
+        id="localBusinessSchema"
+        strategy="beforeInteractive"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(localBusinessSchema),
+        }}
       />
       <UFHero
+        heroImage={heroImage}
         h1={loc.h1}
         subtitle={loc.heroSubtitle}
         tagline={loc.heroTagline}
         city={loc.city}
       />
-      <UFIntroSection paragraphs={loc.introParagraphs} city={loc.city} />
+      <UFIntroSection
+        img="/fur/buy-and-sell-used-furniture-in-ras-al-khaimah.jpg"
+        paragraphs={loc.introParagraphs}
+        city={loc.city}
+      />
       <UFWhatWeBuy categories={loc.whatWeBuyCategories} city={loc.city} />
       <UFHowItWorks steps={loc.steps} city={loc.city} />
-      <UFPricingTable rows={loc.pricingRows} note={loc.pricingNote} city={loc.city} />
+      <UFPricingTable
+        rows={loc.pricingRows}
+        note={loc.pricingNote}
+        city={loc.city}
+      />
       <UFWhyChooseUs reasons={loc.whyChooseUs} city={loc.city} />
       <UFAreasServed areas={loc.areasServed} city={loc.city} />
       <UFFAQ faqs={loc.faqs} city={loc.city} />
-      <UFCTASection heading={loc.ctaHeading} body={loc.ctaBody} city={loc.city} />
+      <UFCTASection
+        heading={loc.ctaHeading}
+        body={loc.ctaBody}
+        city={loc.city}
+      />
     </>
   );
 }

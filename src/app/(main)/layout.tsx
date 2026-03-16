@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_AE",
-    url: "process.env.APP_URL",
+    url: process.env.APP_URL,
     siteName: "Prime Dubai Movers",
     title: "Prime Dubai Movers | Best Movers and Packers in Dubai, UAE",
     description:

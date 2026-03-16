@@ -23,15 +23,15 @@ export default function UFCTASection({
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="inline-flex items-center gap-2 bg-white/20 rounded-full px-4 py-1.5 mb-6">
           <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
-          <span className="text-white text-sm font-medium">
+          <span className="text-navy-light text-sm font-medium">
             Same-Day Service Available in {city}
           </span>
         </div>
 
-        <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+        <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight text-shadow-2xs">
           {heading}
         </h2>
-        <p className="text-amber-100 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-amber-50 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
           {body}
         </p>
 

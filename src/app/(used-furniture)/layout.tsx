@@ -1,15 +1,30 @@
+import { CodeSquare } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: {
-    template: "%s | Dubai Furniture Buyers",
-    default: "Dubai Furniture Buyers — Used Furniture Buyers Across UAE",
+  authors: [{ name: "Best Used Furniture Buyers" }],
+  openGraph: {
+    type: "website",
+    locale: "en_AE",
+    url: process.env.APP_URL,
+    siteName: "Best Used Furniture Buyers",
   },
-  description:
-    "Dubai Furniture Buyers — UAE's trusted used furniture buying and selling service. Same-day pickup, instant cash, free valuation across Dubai, Abu Dhabi, Sharjah, Ajman, Al Ain, and Ras Al Khaimah.",
-};
+  robots: {
+    index: true,
+    follow: true,
+    "max-image-preview": "large",
+    "max-snippet": -1,
 
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
 const locations = [
   { href: "/used-furniture-buyers-dubai", label: "Dubai" },
   { href: "/used-furniture-buyers-abu-dhabi", label: "Abu Dhabi" },
@@ -217,6 +232,18 @@ export default function UsedFurnitureLayout({
                     />
                   </svg>
                   <span>Daily: 9:00 AM – 11:00 PM</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CodeSquare className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />
+                  <span>
+                    <a
+                      href="https://wa.me/+923471309916?text=Hello%20Mashal,%20I%20Need%20Your%20Service%20!"
+                      rel="noopener noreferrer"
+                      className="text-amber-400 underline underline-offset-2"
+                    >
+                      Developed By Mashal Huraira
+                    </a>
+                  </span>
                 </li>
               </ul>
             </div>

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Image, { StaticImageData } from "next/image";
 
 interface UFHeroProps {
   h1: string;
@@ -7,6 +7,7 @@ interface UFHeroProps {
   city: string;
   whatsappNumber?: string;
   phone?: string;
+  heroImage: StaticImageData;
 }
 
 export default function UFHero({
@@ -16,12 +17,21 @@ export default function UFHero({
   city,
   whatsappNumber = "971561046146",
   phone = "+971 56 104 6146",
+  heroImage,
 }: UFHeroProps) {
   return (
-    <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-[#1E3A5F]">
+    <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+      <Image
+        src={heroImage}
+        alt={h1}
+        loading="eager"
+        placeholder="blur"
+        fill
+        className="object-cover "
+      />
       <div className="absolute inset-0 z-0">
-        <div className="w-full h-full bg-slate-800" aria-hidden="true" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1E3A5F]/95 via-[#1E3A5F]/80 to-[#1E3A5F]/50" />
+        <div className="w-full h-full bg-slate-800/70" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1E3A5F]/70 via-[#1E3A5F]/60 to-[#1E3A5F]/50" />
       </div>
       <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-amber-500/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-2xl" />
