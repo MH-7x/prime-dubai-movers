@@ -16,7 +16,7 @@ export default function HeroSection() {
       <div className="relative container-custom w-full pb-20 pt-16 md:py-28">
         <div className="max-w-3xl">
           {/* Trust badge */}
-          <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-white/10 px-4 py-2 text-sm text-gold mb-8 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-white/10 px-4 py-2 md:text-sm text-xs text-gold mb-8 backdrop-blur-sm">
             <span className="font-medium">14+ Years</span>
             <span className="text-white/40">|</span>
             <span className="font-medium">5,000+ Moves</span>

@@ -3,13 +3,14 @@
 import React from "react";
 import Link from "next/link";
 import { Phone, Mail, Clock, MapPin, Facebook, Instagram } from "lucide-react";
+import Image from "next/image";
 
 const quickLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
   { name: "Contact", href: "/contact" },
-  { name: "Free Quote", href: "/contact" },
+  { name: "Free Quote", href: "/free-quote" },
   { name: "Blog", href: "/blog" },
 ];
 
@@ -42,10 +43,14 @@ export default function Footer() {
           {/* Column 1: Company Info */}
           <div className="md:col-span-2">
             <Link href="/" className="inline-block mb-4">
-              <span className="text-xl font-extrabold tracking-tight">
-                <span className="text-gold">PRIME</span>{" "}
-                <span className="text-white">DUBAI MOVERS</span>
-              </span>
+              <div className="w-40 h-20 relative">
+                <Image
+                  src={"/logo-white.svg"}
+                  alt="Prime Dubai Movers White logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
             </Link>
             <p className="text-gray-300 text-sm leading-relaxed mb-5">
               Your trusted partner for professional moving services across Dubai
@@ -54,7 +59,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-3">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/primedubaimovers1"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -63,7 +68,7 @@ export default function Footer() {
                 <Facebook className="size-4" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/primedubaimovers/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -139,7 +144,12 @@ export default function Footer() {
             <ul className="flex flex-col gap-4">
               <li className="flex items-start gap-3">
                 <MapPin className="size-4 text-gold mt-0.5 shrink-0" />
-                <span className="text-sm text-gray-300">Dubai, UAE</span>
+                <a
+                  href="https://maps.app.goo.gl/Tur9mmTmWc2RxCXR8"
+                  className="text-sm text-gray-300 shrink-0"
+                >
+                  3 35a St - Zaa&apos;beel Second - Za&apos;abeel - Dubai
+                </a>
               </li>
               <li>
                 <a
@@ -161,8 +171,10 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="size-4 text-gold mt-0.5 shrink-0" />
-                <div className="text-sm text-gray-300">
-                  <p>Sat - Thu: 8AM - 8PM, Fri: 9AM - 5PM</p>
+                <div className="text-sm shrink-0">
+                  <p className="text-gray-400 ">
+                    Sat - Thu: 8AM - 8PM, Fri: 9AM - 5PM
+                  </p>
                 </div>
               </li>
             </ul>
@@ -173,7 +185,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="bg-navy-dark">
         <div className="container-custom flex flex-col sm:flex-row items-center justify-between py-4 gap-3 text-sm text-gray-400">
-          <p suppressHydrationWarning>
+          <p suppressHydrationWarning className="text-gray-400">
             &copy; {currentYear} Prime Dubai Movers. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
@@ -184,7 +196,7 @@ export default function Footer() {
               Privacy Policy
             </Link>
             <Link
-              href="/terms-of-service"
+              href="/"
               className="hover:text-gold transition-colors duration-200"
             >
               Terms of Service

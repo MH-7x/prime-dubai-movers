@@ -244,7 +244,10 @@ export default function PrivacyPolicyPage() {
               <strong>Phone:</strong> +971 56 104 6146
             </li>
             <li>
-              <strong>Address:</strong> Dubai, United Arab Emirates
+              <strong>Address:</strong>{" "}
+              <a href="https://maps.app.goo.gl/Tur9mmTmWc2RxCXR8">
+                3 35a St - Zaa&apos;beel Second - Za&apos;abeel - Dubai
+              </a>
             </li>
           </ul>
         </div>

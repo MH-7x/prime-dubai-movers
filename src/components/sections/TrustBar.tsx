@@ -44,7 +44,11 @@ export default function TrustBar() {
             )}
           >
             {trustItems.map((item) => (
-              <div key={item.value} className="bg-background p-10">
+              <div key={item.value} className="bg-background p-10 relative">
+                <item.icon
+                  className="absolute top-5 right-5 opacity-55 text-gold"
+                  size={30}
+                />
                 <span className="font-bold text-navy text-3xl">
                   {item.value}
                 </span>

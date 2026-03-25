@@ -93,7 +93,7 @@ export default function RootLayout({
                 streetAddress: "3 35a St - Zaa'beel Second - Za'abeel",
               },
               sameAs: [
-                "https://www.facebook.com/primedubaimovers",
+                "https://www.facebook.com/primedubaimovers1",
                 "https://www.instagram.com/primedubaimovers",
               ],
             }),

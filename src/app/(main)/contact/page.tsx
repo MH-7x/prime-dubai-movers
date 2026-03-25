@@ -46,8 +46,8 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Visit Our Office",
-    value: "Dubai, UAE",
-    href: undefined,
+    value: "3 35a St - Zaa'beel Second - Za'abeel - Dubai",
+    href: "https://maps.app.goo.gl/Tur9mmTmWc2RxCXR8",
     description: "Sat-Thu: 8AM-8PM | Fri: 9AM-5PM",
   },
 ];

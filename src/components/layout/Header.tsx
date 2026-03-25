@@ -147,7 +147,7 @@ export default function Header() {
             </div>
             <div className="flex gap-x-3 md:ml-auto">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/primedubaimovers1"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -156,7 +156,7 @@ export default function Header() {
                 <Facebook className="size-3.5" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/primedubaimovers/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
