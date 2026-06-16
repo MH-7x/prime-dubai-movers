@@ -4,7 +4,7 @@ export default function ActionButton() {
   return (
     <div className="fixed right-5 md:bottom-10 bottom-7 pb-4 flex flex-col md:gap-5 gap-3 z-50">
       <a
-        href="https://wa.me/+971547326816?text=I%20Come%20From%20Your%20Website%20and%20I%20Need%20Moving%20Services"
+        href="https://wa.me/+971561046146?text=I%20Come%20From%20Your%20Website%20and%20I%20Need%20Moving%20Services"
         target="_blank"
         aria-label="WhatsApp Number"
         rel="noopener noreferrer"
@@ -16,7 +16,7 @@ export default function ActionButton() {
       </a>
 
       <a
-        href="tel:+971547326816"
+        href="tel:+971561046146"
         target="_blank"
         aria-label="Phone Number"
         rel="noopener noreferrer"
